@@ -1,0 +1,19 @@
+@import "bootstrap";
+@import "vars";
+@import "mixins";
+@import "normalize";
+@import "forms";
+@import "buttons";
+//@import "icons";
+@import "utils";
+@import "types";
+@import "confirm-box";
+@import "for-oh-for";
+@import "modals";
+@import "desktop";
+@import "animations-desktop";
+
+@media screen and (max-width:650px) {
+  @import "mobile";
+  @import "animations-mobile";
+}
