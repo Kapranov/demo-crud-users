@@ -4,7 +4,7 @@
 
 ![schema](/schema.png "schema project")
 
-## Setup Firefox
+## Setup Firebase with your keys
 
 ```
 EmberFire installed.
