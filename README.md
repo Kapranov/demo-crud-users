@@ -30,7 +30,9 @@ var ENV = {
     apiKey: 'xyz',
     authDomain: 'YOUR-FIREBASE-APP.firebaseapp.com',
     databaseURL: 'https://YOUR-FIREBASE-APP.firebaseio.com',
+    projectId: "YOUR-FIREBASE-APP-ID",
     storageBucket: 'YOUR-FIREBASE-APP.appspot.com',
+    messagingSenderId: "YOUR-MESSAGE-SENDER-ID"
   },
 
 
