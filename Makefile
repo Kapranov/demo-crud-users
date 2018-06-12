@@ -10,6 +10,11 @@ push: pub
 				$(V)git commit -m "added support Makefile"
 				$(V)git push -u origin master
 
+git-%: pub
+				$(V)git add .
+				$(V)git commit -m "$(@:git-%=%)"
+				$(V)git push origin master
+
 pri:
 				$(V)cp ./config/environment.js.private ./config/environment.js
 

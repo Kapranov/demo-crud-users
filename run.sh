@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-make run
+make git-$1
