@@ -32,7 +32,15 @@ module.exports = function(environment) {
       EXTEND_PROTOTYPES: { Date: false }
     },
 
-    APP: { }
+    APP: { },
+
+    moment: {
+      includeTimezone: 'all',
+      outputFormat: 'L',
+      allowEmpty: false,
+      includeLocales: true
+      //includeLocales: ['en', 'ru', 'uk']
+    }
   };
 
   if (environment === 'development') {
