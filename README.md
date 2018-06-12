@@ -1,5 +1,10 @@
 # Demo-CRUD-Users
 
+## Start and Git Commint with Pushed on Repository
+
+**start server**: `make run`
+**make git commit**: `./run.sh "YOUR_COMMIT"`
+
 ## Model of the user
 
 ![schema](/schema.png "schema project")
