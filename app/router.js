@@ -12,4 +12,10 @@ Router.map(function() {
   this.route('missing', { path: '/*path' });
 });
 
+Router.extend({
+  redirect: function(){
+    this.transitionTo("index");
+  }
+});
+
 export default Router;
