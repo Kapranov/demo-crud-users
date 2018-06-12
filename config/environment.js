@@ -6,6 +6,27 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: 'xyz',
+      authDomain: 'YOUR-FIREBASE-APP.firebaseapp.com',
+      databaseURL: 'https://YOUR-FIREBASE-APP.firebaseio.com',
+      projectId: "YOUR-FIREBASE-APP-ID",
+      storageBucket: 'YOUR-FIREBASE-APP.appspot.com',
+      messagingSenderId: "YOUR-MESSAGE-SENDER-ID"
+    },
+    contentSecurityPolicy: {
+      // 'default-src': "'none'",
+      // 'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      // 'font-src': "'self'",
+      // 'connect-src': "'self'",
+      // 'img-src': "'self'",
+      // 'report-uri':"'localhost'",
+      // 'style-src': "'self' 'unsafe-inline'",
+      // 'frame-src': "'none'"
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     EmberENV: {
       FEATURES: { },
       EXTEND_PROTOTYPES: { Date: false }
