@@ -1,0 +1,9 @@
+{{#if enabled}}
+  <div {{action 'toggleModal'}} class="modal modal-show">
+    <button class="modal-close" {{action "hideModal"}}>&times;</button>
+    <div class="modal-body">
+      {{yield}}
+    </div>
+  </div>
+  <div class="modal-backdrop" {{action "hideModal"}}></div>
+{{/if}}

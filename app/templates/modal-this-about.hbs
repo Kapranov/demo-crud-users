@@ -1,0 +1,14 @@
+{{#modal-dialog enabled=false title="--Simple Modal --" id="modal-main"}}
+  <h3>About this demo</h3>
+  <hr/>
+  <p>This demo is an Ember JS app, it demonstrates how you can achieve a simple CRUD with Ember 3.2.0 + Ember-Data 3.1.1. It also demonstrates the use of complex css animations / transitions on views and before or after route transitions.</p>
+  <p>Data is stored / Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. <code>Firebase</code><a href="https://github.com/firebase/emberfire" target="_blank"> Adapter for Firebase</a>.</p>
+  <p>There is also a mobile version, which has some cool responsive tricks to handle touch gestures. Visit this app with your phone or simply resize your browser to check it out.</p>
+  <hr/>
+  <p>Finally this demo and its source code are <a href="https://github.com/kapranov/demo-crud-users" target="_blank">Demo-CRUD-Users</a></p>
+{{/modal-dialog}}
+
+<button class="about-this-demo" {{action 'openModal' 'modal-main'}}>
+  <i class="fa fa-eye"></i>
+  <span>About this demo</span>
+</button>
