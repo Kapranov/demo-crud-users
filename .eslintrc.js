@@ -15,9 +15,20 @@ module.exports = {
     browser: true
   },
   rules: {
+    'no-console':  process.env.NODE_ENV === 'development' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'development' ? 2 : 0,
+    //"no-alert": "off",
+    //"no-array-constructor": "off",
+    //"no-bitwise": "off",
+    //"no-caller": "off",
+    //"no-case-declarations": "error",
+    //"no-catch-shadow": "off",
+    //"no-class-assign": "error",
+    //"no-cond-assign": "error",
+    //"no-confusing-arrow": "off",
+    //"no-console": "off",
   },
   overrides: [
-    // node files
     {
       files: [
         'ember-cli-build.js',
