@@ -1,6 +1,6 @@
 # Demo-CRUD-Users
 
-## Start and Git Commint with Pushed on Repository
+## Start and Git Commit via Pushed on Repository without Firebase Keys
 
 **start server**: `make run`
 **make git commit**: `./run.sh "YOUR_COMMIT"`
