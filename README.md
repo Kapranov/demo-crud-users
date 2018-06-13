@@ -127,7 +127,7 @@ export default Component.extend({
 
 ## Ember Testing
 
-[http://voidcanvas.com/ember-testing/][Running tests from terminal]
+[Running tests from terminal]:[http://voidcanvas.com/ember-testing/]
 
 ```sh
 ember test
