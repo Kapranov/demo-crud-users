@@ -127,7 +127,7 @@ export default Component.extend({
 
 ## Ember Testing
 
-[http://voidcanvas.com/ember-testing/][Running tests from terminal]
+[Running tests from terminal][1]
 
 ```sh
 ember test
@@ -139,3 +139,5 @@ ember test –filter="integration" -s
 ```
 
 ### 13 June 2018 by Oleg G.Kapranov
+
+[1]: http://voidcanvas.com/ember-testing/
