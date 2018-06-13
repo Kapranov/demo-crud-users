@@ -12,8 +12,8 @@ Router.map(function() {
   this.route('missing', { path: '/*path' });
   this.route('users', function() {
     this.route('new');
-    this.route('show', { path: '/:user_id/show' });
     this.route('edit', { path: '/:user_id/edit' });
+    this.route('show', { path: '/:user_id/show' });
   });
 
   this.route('admin', function() {
@@ -22,6 +22,11 @@ Router.map(function() {
       this.route('new');
       this.route('edit', { path: '/:user_id/edit' });
       this.route('show', { path: '/:user_id/show' });
+    });
+    this.route('roles', function() {
+      this.route('edit');
+      this.route('new');
+      this.route('show');
     });
   });
 });
