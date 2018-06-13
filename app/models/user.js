@@ -13,9 +13,6 @@ export default DS.Model.extend({
   createdMonth: computed('createdAt', function(){
     return this.get('createdAt').getMonth() + 1
   }),
-  //fullInfo: (function(){
-  //  return (this.get('name')) + ' ' + (this.get('email'));
-  //}).property('name', 'email')
   fullInfo: computed('name', 'email', function(){
     return (this.get('name')) + ' ' + (this.get('email'));
   })
