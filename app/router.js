@@ -15,6 +15,10 @@ Router.map(function() {
     this.route('show', { path: '/:user_id/show' });
     this.route('edit', { path: '/:user_id/edit' });
   });
+
+  this.route('admin', function() {
+    this.route('seeder');
+  });
 });
 
 Router.extend({
