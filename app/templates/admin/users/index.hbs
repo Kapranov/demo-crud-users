@@ -1,0 +1,47 @@
+<div class="panel panel-default">
+<div class="panel-heading">
+  <i class="fa fa-address-card-o fa-3x"></i>
+  <span class="span-panel-heading">Listing of the users</span>
+</div>
+  <div class="panel-body">
+    {{#link-to 'admin.users.new'   tagName="button" class="button primary medium active"}}Add a New User{{/link-to}}
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-Mail</th>
+        <th><i class="fa fa-dollar"></i></th>
+        <th>Biography</th>
+        <th>Avatar</th>
+        <th>Updated</th>
+        <th>Created</th>
+        <!-- th>Created Month</th -->
+        <th><i class="fa fa-trash-o"></i><span> Destroy</span></th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each model as |user|}}
+      <tr>
+        <td>{{#link-to 'admin.users.edit' user.id}}{{user.name}}{{/link-to}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.spent}}</td>
+        <td>{{user.bio}}</td>
+        <td class="jumbotron">
+          <img class="img-circle" src={{user.avatarUrl}} alt="avatar">
+        </td>
+        <td>{{moment-format user.updatedAt 'MMM D, YYYY h:mm A'}}</td>
+        <td>{{moment-format user.createdAt 'MMM D, YYYY h:mm A'}}</td>
+        <!-- td>{{format-date createdAt=updated}}</td -->
+        <td><button class="btn btn-danger remove" {{action 'deleteUser' user}}><span class="fa fa-minus"></span> Remove</button></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<div class="well">
+  <ul class="nav nav-pills">
+    {{#link-to 'users.index' tagName="button" class="button primary medium active"}}Back{{/link-to}}
+  </ul>
+</div>
