@@ -21,5 +21,8 @@ pri:
 pub:
 				$(V)cp ./config/environment.js.public ./config/environment.js
 
+npm:
+				$(V)npm install
+
 run: pri
 				$(V)ember server
