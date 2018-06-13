@@ -3,15 +3,9 @@ import { computed } from '@ember/object';
 import firebase from 'firebase';
 
 export default Route.extend({
-  avatarPath: '/assets/images/avatars/',
-
   model(params) {
     console.log(params.id);
-    // return this.store.findRecord('user', params.id);
     return this.store.find('user', params.id);
-    // return this.store.find('user', { id: params.user_id }).then(function(array) {
-    //   return array.get('firstObject');
-    // });
   },
 
   setupController(controller, model) {
@@ -47,6 +41,10 @@ export default Route.extend({
       }).catch(() => {
         alert("couldn't save user.");
       });
+    },
+
+    cancel() {
+      this.transitionTo('users');
     },
 
     willTransition(transition) {

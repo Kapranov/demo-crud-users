@@ -40,6 +40,8 @@ button, .gray {
   }
 }
 
+
+.red, button.active, .button.active { @include buttonColorz($red); }
 .blue, button.active, .button.active { @include buttonColorz($blue); }
 .delete, button.red.active  { @include buttonColorz($red); }
 

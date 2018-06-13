@@ -29,6 +29,10 @@ export default Route.extend({
       user.save().then(() => this.transitionTo('admin.users'));
     },
 
+    cancel() {
+      this.transitionTo('admin.users');
+    },
+
     willTransition() {
       let model = this.controller.get('model');
 

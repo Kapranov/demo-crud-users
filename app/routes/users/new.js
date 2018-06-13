@@ -30,6 +30,10 @@ export default Route.extend({
       user.save().then(() => this.transitionTo('users'));
     },
 
+    cancel() {
+      this.transitionTo('users');
+    },
+
     willTransition() {
       let model = this.controller.get('model');
 

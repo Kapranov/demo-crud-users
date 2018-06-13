@@ -2,8 +2,6 @@ import Route from '@ember/routing/route';
 import firebase from 'firebase';
 
 export default Route.extend({
-  avatarPath: '/assets/images/avatars/',
-
   model(params) {
     return this.store.find('user', params.user_id);
   },
@@ -19,7 +17,6 @@ export default Route.extend({
 
   actions: {
     saveUser(model) {
-      //update.save().then(() => this.transitionTo('admin.users'));
       const transform = firebase.database.ServerValue.TIMESTAMP;
 
       model.setProperties({
@@ -37,6 +34,10 @@ export default Route.extend({
       }).catch(() => {
         alert("couldn't save user.");
       });
+    },
+
+    cancel() {
+      this.transitionTo('admin.users');
     },
 
     willTransition(transition) {

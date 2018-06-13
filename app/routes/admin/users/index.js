@@ -12,8 +12,11 @@ export default Route.extend({
       let confirmation = confirm('Are you sure?');
 
       if (confirmation) {
-        user.deleteRecord();
-        user.save().then(() => this.transitionTo('users.index'));
+        user.destroyRecord().then(() => {
+          this.transitionTo('users.index');
+        }).catch(() => {
+          user.reload();
+        });
       }
     }
   }

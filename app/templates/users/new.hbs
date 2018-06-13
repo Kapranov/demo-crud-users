@@ -52,8 +52,9 @@
 
   <div class="well">
     <ul class="nav nav-pills">
-      <button type="submit" class="button primary medium" {{action 'saveUser' model}}>Save</button>
-      {{#link-to 'users.index'   tagName="button" class="button primary medium active"}}Back{{/link-to}}
+      <button class="button primary medium red" {{action 'cancel'}}>Cancel</button>
+      <button type="submit" class="button primary medium btn-info" {{action 'saveUser' model}}>Save</button>
+      {{#link-to 'users.index'   tagName="button" class="button primary medium  blue"}}Back{{/link-to}}
     </ul>
   </div>
 </div>
