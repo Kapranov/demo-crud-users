@@ -10,6 +10,11 @@ Router.map(function() {
   this.route('about');
   this.route('index', { path: "/" });
   this.route('missing', { path: '/*path' });
+  this.route('users', function() {
+    this.route('new');
+    this.route('show', { path: '/:user_id/show' });
+    this.route('edit', { path: '/:user_id/edit' });
+  });
 });
 
 Router.extend({

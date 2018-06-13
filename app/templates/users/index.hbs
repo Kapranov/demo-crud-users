@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="tools">
+    <!-- a class="button-short blue create-btn" href="#">
+      <i class="fa fa-plus"></i>
+      <span>⬅ Add user</span>
+    </a -->
+    {{#link-to 'users.new'   tagName="button" class="button-short blue create-btn"}}
+      <i class="fa fa-plus"></i>
+      <span>⬅ Add user</span>
+    {{/link-to}}
+    <div class="users-count">
+      Users: {{model.length}}
+    </div>
+  </div>
+  <ul class="users-listing">
+    {{#each model as |user|}}
+      <!-- li>{{user.name}}</li -->
+      <li>{{link-to user.name "users.show" user class=user.id}}</li>
+    {{else}}
+      <li>no users… :-(</li>
+    {{/each}}
+  </ul>
+  <div class="user-pane">
+    {{outlet}}
+  </div>
+</div>
+
+<div class="well">
+  <ul class="nav nav-pills">
+    {{#link-to 'admin.users' tagName="button" class="button active"}}Listing Users{{/link-to}}
+    {{#link-to 'users.new'   tagName="button" class="button primary medium"}}Add a New User{{/link-to}}
+  </ul>
+</div>

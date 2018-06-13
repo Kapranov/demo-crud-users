@@ -1,0 +1,59 @@
+<div class="well">
+  <ul class="nav nav-pills">
+    <i class="fa fa-address-card-o fa-4x"></i>
+  </ul>
+</div>
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-3">
+      <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i></span>
+          {{input type="text" value=model.name class="form-control" placeholder="The full name of the user"}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Spent Dollar</label>
+    <div class="col-sm-3">
+      <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-dollar fa-fw" aria-hidden="true"></i></span>
+          {{input type="number" value=model.spent class="form-control" placeholder="The spent of the user"}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">E-Mail</label>
+    <div class="col-sm-3">
+      <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+          {{input type="text" value=model.email class="form-control" placeholder="The email of the user"}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Biography</label>
+    <div class="col-sm-3">
+      <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span>
+          {{input type="text" value=model.bio class="form-control" placeholder="The biography of the user"}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Avatar</label>
+    <div class="col-sm-3">
+      <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-file-photo-o fa-fw" aria-hidden="true"></i></span>
+          {{input type="text" value=model.avatarUrl class="form-control" placeholder="The upload image of the user"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="well">
+    <ul class="nav nav-pills">
+      <button type="submit" class="button primary medium" {{action 'saveUser' model}}>Save</button>
+      {{#link-to 'users.index'   tagName="button" class="button primary medium active"}}Back{{/link-to}}
+    </ul>
+  </div>
+</div>
