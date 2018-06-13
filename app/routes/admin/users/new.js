@@ -20,7 +20,7 @@ export default Route.extend({
         name: newUser.name,
         email: newUser.email,
         bio: newUser.bio,
-        avatarUrl: this.get('avatarPath') + newUser.avatarUrl,
+        avatarUrl: `${this.get('avatarPath')}${newUser.avatarUrl}`,
         spent: newUser.spent,
         updatedAt: transform,
         createdAt: transform,
