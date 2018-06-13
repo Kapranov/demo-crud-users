@@ -28,7 +28,9 @@
         <td>{{user.spent}}</td>
         <td>{{user.bio}}</td>
         <td class="jumbotron">
-          <img class="img-circle" src={{user.avatarUrl}} alt="avatar">
+          {{#link-to 'admin.users.show' user.id}}
+            <img class="img-circle" src={{user.avatarUrl}} alt="avatar">
+          {{/link-to}}
         </td>
         <td>{{moment-format user.updatedAt 'MMM D, YYYY h:mm A'}}</td>
         <td>{{moment-format user.createdAt 'MMM D, YYYY h:mm A'}}</td>
