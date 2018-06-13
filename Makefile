@@ -15,6 +15,9 @@ git-%: pub
 				$(V)git commit -m "$(@:git-%=%)"
 				$(V)git push origin master
 
+git_pull:
+				$(V)git pull
+
 pri:
 				$(V)cp ./config/environment.js.private ./config/environment.js
 
