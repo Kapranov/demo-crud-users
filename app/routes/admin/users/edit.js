@@ -1,10 +1,11 @@
 import Route from '@ember/routing/route';
+import firebase from 'firebase';
 
 export default Route.extend({
   avatarPath: '/assets/images/avatars/',
 
   model(params) {
-    return this.store.findRecord('user', params.user_id);
+    return this.store.find('user', params.user_id);
   },
 
   setupController(controller, model) {
@@ -17,8 +18,25 @@ export default Route.extend({
   },
 
   actions: {
-    saveUser(update) {
-      update.save().then(() => this.transitionTo('admin.users'));
+    saveUser(model) {
+      //update.save().then(() => this.transitionTo('admin.users'));
+      const transform = firebase.database.ServerValue.TIMESTAMP;
+
+      model.setProperties({
+        name:  model.name,
+        email: model.email,
+        bio:   model.bio,
+        spent: model.spent,
+        avatarUrl: model.avatarUrl,
+        updatedAt: transform,
+        createdAt: model.createdAt
+      });
+
+      model.save().then(() => {
+        this.transitionTo('admin.users.index');
+      }).catch(() => {
+        alert("couldn't save user.");
+      });
     },
 
     willTransition(transition) {
