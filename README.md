@@ -138,6 +138,46 @@ ember test –filter="unit"
 ember test –filter="integration" -s
 ```
 
+## Ember-Electron
+
+* `ember electron` - Run app in Electron with live-reload server
+* `ember electron:test` - Test the app using Electron
+* `ember electron:test --server` - Test with Electron in development server mode
+* `ember electron:package` - Create binaries (.app, .exe, etc)
+* `ember electron:make` - Generate platform specific distributables (installers, distribution packages, etc)
+* `ember electron:build` - Build out Ember app with Electron instrumentation (useful for optimizing multi-platform builds)
+* `ember electron:assemble` - Assemble Electron application project (useful for debugging builds)
+
+To see a real world example, check out [Ghost Desktop](https://github.com/tryghost/Ghost-Desktop).
+
 ### 13 June 2018 by Oleg G.Kapranov
 
-[1]: http://voidcanvas.com/ember-testing/
+[1]:  http://voidcanvas.com/ember-testing/
+[2]:  https://github.com/poteto/ember-changeset-validations
+[3]:  https://github.com/simplabs/ember-simple-auth
+[4]:  https://github.com/jpadilla/ember-simple-auth-token
+[5]:  http://ember-engines.com/
+[6]:  https://gist.github.com/devotox/240c36aa1cb51e63fa2b8917582d2e3f
+[7]:  https://github.com/dgeb/ember-engines-demo
+[8]:  https://github.com/dgeb/ember-blog-engine
+[9]:  https://medium.com/@ynotdraw/ember-engines-tips-after-nine-months-c128d6ea525a
+[10]: https://github.com/piceaTech/ember-rapid-forms
+[11]: http://piceatech.github.io/ember-rapid-forms
+[12]: https://github.com/yapplabs/ember-radio-button
+[13]: https://github.com/yapplabs/ember-radio-button/tree/master/tests/dummy/app/components
+[14]: https://github.com/patience-tema-baron/ember-keyboard
+[15]: https://github.com/jamesarosen/ember-i18n
+[16]: https://github.com/scoutforpets/ember-fullcalendar
+[17]: http://ember-concurrency.com/docs/introduction/
+[18]: https://github.com/201-created/ember-cli-fake-server
+[19]: https://github.com/ember-app-scheduler/ember-app-scheduler
+[20]: https://github.com/san650/ember-web-app
+[21]: https://san650.github.io/ember-web-app/latest/
+[22]: https://github.com/trentmwillis/ember-exam
+[23]: https://medium.com/@sekharp/building-a-notes-app-in-ember-and-electron-73dad6d6dcc0
+[24]: https://github.com/sekharp/bartleby
+[25]: https://github.com/201-created/emberconf-schedule-2018
+
+[50]: https://github.com/HospitalRun/hospitalrun-frontend
+[51]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
+[52]: https://github.com/TryGhost/Ghost-Desktop

@@ -33,5 +33,12 @@ npm:
 test:
 				$(V)ember test
 
+unit:
+				$(V)ember electron:test
+
+start: pri
+				$(V)ember electron
+
+
 run: pri
 				$(V)ember server
