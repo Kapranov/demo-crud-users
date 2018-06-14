@@ -1,6 +1,9 @@
 V ?= @
 LOCALHOST := 'localhost'
-PORT := '4200'
+PORT 			:= '4200'
+PATH      := node_modules/.bin:$(PATH)
+SHELL      := /usr/bin/env bash
+# ------------------------------------------------------------------------------
 
 default:
 				$(V)echo Please use \'make help\' or \'make ..any_parameters..\'
@@ -26,6 +29,9 @@ pub:
 
 npm:
 				$(V)npm install
+
+test:
+				$(V)ember test
 
 run: pri
 				$(V)ember server
