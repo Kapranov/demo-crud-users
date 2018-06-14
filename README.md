@@ -150,6 +150,24 @@ ember test –filter="integration" -s
 
 To see a real world example, check out [Ghost Desktop](https://github.com/tryghost/Ghost-Desktop).
 
+## Liquid-Fire - [Predefined Transitions][48]
+
+* default
+* cross-fade
+* explode
+* fade
+* flex-grow
+* fly-to
+* move-over
+* scale
+* scroll-then
+* to-down
+* to-left
+* to-right
+* to-up
+* wait
+
+
 ### 13 June 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
@@ -176,8 +194,13 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [22]: https://github.com/trentmwillis/ember-exam
 [23]: https://medium.com/@sekharp/building-a-notes-app-in-ember-and-electron-73dad6d6dcc0
 [24]: https://github.com/sekharp/bartleby
-[25]: https://github.com/201-created/emberconf-schedule-2018
+[25]: https://github.com/robert-j-webb/ember-video
+[26]: https://medium.com/@Realrobwebb/my-first-6-months-using-ember-a-retrospective-a5ecf3259b09
+[27]: https://github.com/ember-animation/liquid-fire
+[28]: https://ember-animation.github.io/liquid-fire/
 
+[48]: https://github.com/ember-animation/liquid-fire/tree/master/addon/transitions
+[49]: https://github.com/201-created/emberconf-schedule-2018
 [50]: https://github.com/HospitalRun/hospitalrun-frontend
 [51]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
 [52]: https://github.com/TryGhost/Ghost-Desktop

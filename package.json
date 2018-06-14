@@ -51,6 +51,7 @@
     "ember-source": "~3.2.0",
     "emberfire": "^2.0.10",
     "eslint-plugin-ember": "^5.2.0",
+    "liquid-fire": "^0.29.3",
     "loader.js": "^4.7.0"
   },
   "engines": {
