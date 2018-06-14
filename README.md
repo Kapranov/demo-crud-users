@@ -198,6 +198,13 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [26]: https://medium.com/@Realrobwebb/my-first-6-months-using-ember-a-retrospective-a5ecf3259b09
 [27]: https://github.com/ember-animation/liquid-fire
 [28]: https://ember-animation.github.io/liquid-fire/
+[29]: https://www.embercasts.com/course/full-stack-ember-with-phoenix/watch/whats-in-this-course-phoenix
+[30]: https://github.com/adfinis-sygroup/ember-validated-form
+[31]: https://github.com/ember-learn
+[32]: https://astronomersiva.github.io/ember-display-in-browser/
+[33]: https://github.com/sandydoo/ember-google-maps
+[34]: https://github.com/emberjs/ember-mocha
+[35]: https://thejsguy.com/2018/05/26/conditional-default-values-for-ember-data-model-attributes.html
 
 [48]: https://github.com/ember-animation/liquid-fire/tree/master/addon/transitions
 [49]: https://github.com/201-created/emberconf-schedule-2018
