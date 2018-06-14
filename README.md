@@ -181,3 +181,4 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [50]: https://github.com/HospitalRun/hospitalrun-frontend
 [51]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
 [52]: https://github.com/TryGhost/Ghost-Desktop
+[53]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts

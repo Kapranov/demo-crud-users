@@ -21,7 +21,7 @@ export default Route.extend({
         name: newUser.name,
         email: newUser.email,
         bio: newUser.bio,
-        avatarUrl: `${this.get('avatarPath')}${newUser.avatarUrl}`,
+        avatarFile: newUser.avatarFile,
         spent: newUser.spent,
         updatedAt: transform,
         createdAt: transform,

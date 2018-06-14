@@ -24,7 +24,7 @@ export default Route.extend({
         email: model.email,
         bio:   model.bio,
         spent: model.spent,
-        avatarUrl: model.avatarUrl,
+        avatarFile: model.avatarFile,
         updatedAt: transform,
         createdAt: model.createdAt
       });

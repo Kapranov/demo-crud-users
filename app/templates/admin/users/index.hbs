@@ -32,8 +32,8 @@
             <img class="img-circle" src={{user.avatarUrl}} alt="avatar">
           {{/link-to}}
         </td>
-        <td>{{moment-format user.updatedAt 'MMM D, YYYY h:mm A'}}</td>
-        <td>{{moment-format user.createdAt 'MMM D, YYYY h:mm A'}}</td>
+        <td>{{moment-format user.updatedAt 'MMM D, YYYY h:mm:ss A'}}</td>
+        <td>{{moment-format user.createdAt 'MMM D, YYYY h:mm:ss A'}}</td>
         <!-- td>{{format-date createdAt=updated}}</td -->
         <td><button class="btn btn-danger remove" {{action 'deleteUser' user}}><span class="fa fa-minus"></span> Remove</button></td>
       </tr>
