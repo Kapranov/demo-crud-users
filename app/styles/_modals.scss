@@ -2,14 +2,14 @@
   font: 85% Helvetica, Arial, sans-serif;
   display: table;
   $modalWidth: 600px;
-  padding: 20px 35px 35px;
+  padding: 35px 35px 35px;
   @include box-sizing(border-box);
   width: $modalWidth;
   min-height: 330px;
   position: fixed;
   left: 50%;
   margin-left: -$modalWidth/2;
-  top: 17%;
+  top: 20%;
   z-index: 100;
   background: white;
   border: 1px solid #ddd;

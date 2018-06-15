@@ -232,7 +232,8 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [60]: https://www.artmann.co/articles/image-uploads-with-ember-js
 [61]: https://lonelycoding.com/ember-js-upload-file-component/
 [62]: https://gist.githubusercontent.com/keithweaver/575a61aab19711bbeb98c10785be4674/raw/ad437b4de63abcaff727cc6012b6f787da600236/s3-file-upload.js
-[59]: https://github.com/Wildhoney/EmberDroplet
+[63]: https://github.com/busybusy/ember-jsignature
+[99]: https://github.com/Wildhoney/EmberDroplet
 
 
 [90]: https://github.com/HospitalRun/hospitalrun-frontend

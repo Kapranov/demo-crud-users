@@ -12,5 +12,7 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import('node_modules/ember-droplet/dist/ember-droplet.js');
+
   return app.toTree();
 };
