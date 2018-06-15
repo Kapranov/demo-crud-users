@@ -205,10 +205,37 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [33]: https://github.com/sandydoo/ember-google-maps
 [34]: https://github.com/emberjs/ember-mocha
 [35]: https://thejsguy.com/2018/05/26/conditional-default-values-for-ember-data-model-attributes.html
-
+[36]: https://github.com/chriskrycho/ember-hoc-example
+[37]: https://www.chriskrycho.com/2018/higher-order-components-in-emberjs.html
+[38]: https://github.com/offirgolan/ember-cp-validations
+[39]: https://medium.com/ember-ish/what-are-controllers-used-for-in-ember-js-cba712bf3b3e
+[40]: https://github.com/synapsemx/ember-smoother-signature
+[41]: https://karolgalanciak.com/blog/2018/04/28/advanced-ember-data-customization-different-model-types-in-ember-app-and-api-for-the-same-resource/
+[42]: https://github.com/kiwiupover/ember-lazy-image-loader
+[43]: https://github.com/cibernox/ember-power-select
+[44]: https://github.com/cibernox/ember-basic-dropdown
+[45]: https://github.com/kaliber5/ember-sticky-element
+[46]: https://github.com/brandynbennett/ember-inputmask
+[47]: https://thejsguy.com/2018/04/06/extracting-metadata-from-a-custom-api-with-ember-data.html
 [48]: https://github.com/ember-animation/liquid-fire/tree/master/addon/transitions
 [49]: https://github.com/201-created/emberconf-schedule-2018
-[50]: https://github.com/HospitalRun/hospitalrun-frontend
-[51]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
-[52]: https://github.com/TryGhost/Ghost-Desktop
-[53]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts
+[50]: https://github.com/tim-evans/ember-file-upload
+[51]: https://github.com/cibernox/ember-power-calendar
+[52]: https://github.com/tim-evans/ember-file-upload
+[53]: https://github.com/benefitcloud/ember-uploader
+[54]: https://github.com/tim-evans/ember-plupload
+[55]: https://github.com/tim-evans/ember-nyc-may-2015
+[56]: https://www.youtube.com/watch?v=5MxJl4ZA0Us
+[57]: https://youtu.be/sZs-VXWIDh0
+[58]: http://ember-droplet.herokuapp.com/
+[59]: http://mockra.com/2016/02/13/ember-s3-file-upload
+[60]: https://www.artmann.co/articles/image-uploads-with-ember-js
+[61]: https://lonelycoding.com/ember-js-upload-file-component/
+[62]: https://gist.githubusercontent.com/keithweaver/575a61aab19711bbeb98c10785be4674/raw/ad437b4de63abcaff727cc6012b6f787da600236/s3-file-upload.js
+[59]: https://github.com/Wildhoney/EmberDroplet
+
+
+[90]: https://github.com/HospitalRun/hospitalrun-frontend
+[91]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
+[92]: https://github.com/TryGhost/Ghost-Desktop
+[93]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts

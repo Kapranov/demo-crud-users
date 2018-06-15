@@ -29,6 +29,7 @@ Router.map(function() {
       this.route('show');
     });
   });
+  this.route('signatures');
 });
 
 Router.extend({

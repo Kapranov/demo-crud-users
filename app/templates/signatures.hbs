@@ -1,0 +1,32 @@
+<h2>Signature Pad</h2>
+
+<div class="well-signature">
+  <div class="signature">
+  {{signature-pad
+      color=color
+      weight=weight
+      value=signature
+      height=height
+      width=width
+  }}
+  </div>
+
+  <div class="color-signature">
+    {{input type="color" value=color}}
+  </div>
+
+  <div class="number-signature">
+    {{input type="number" value=weight}}
+  </div>
+
+  <div class="well">
+    <ul class="nav nav-pills">
+      <li><button class="btn red" {{action "reset"}}>Reset</button></li>
+      <li><button class="btn primary medium" {{action "undo"}}>Undo</button></li>
+    </ul>
+  </div>
+
+  <div>
+    <code>{{stringifiedSignature}}</code>
+  </div>
+</div>
