@@ -31,6 +31,7 @@ Router.map(function() {
   });
   this.route('signatures');
   this.route('uploads');
+  this.route('attachments');
 });
 
 Router.extend({

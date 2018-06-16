@@ -2,7 +2,7 @@ V ?= @
 LOCALHOST := 'localhost'
 PORT 			:= '4200'
 PATH      := node_modules/.bin:$(PATH)
-SHELL      := /usr/bin/env bash
+SHELL     := /usr/bin/env bash
 # ------------------------------------------------------------------------------
 
 default:
@@ -39,6 +39,12 @@ unit:
 start: pri
 				$(V)ember electron
 
+proxy: pri
+				$(V)ember server --proxy http://localhost:8000
+
+upload: pri
+				$(v)push ./public; ./server.rb & popd; sleep 3s
+				$(V)ember server --proxy http://localhost:8000/upload
 
 run: pri
 				$(V)ember server

@@ -1,9 +1,7 @@
 import { helper } from '@ember/component/helper';
 
-export function equals(params) {
-  return params;
+export function equals([a, b]) {
+  return a === b;
 }
 
-export default helper(function ([a, b]) {
-  return a === b;
-});
+export default helper(excerpt);

@@ -167,8 +167,54 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 * to-up
 * wait
 
+## Modify content-security-policy on new ember-cli
 
-### 13 June 2018 by Oleg G.Kapranov
+```
+contentSecurityPolicy: {
+  'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+  'connect-src': "'self'",
+  'style-src': "'self' 'unsafe-inline'"
+},
+
+APP: {
+  ...
+  usingCors: false,
+  corsWithCreds: false,
+  apiURL: null
+},
+
+switch (environment) {
+  case 'local-backend':
+    ENV.APP.usingCorsrs = true;
+    ENV.APP.corsWithCreds = true;
+    ENV.APP.apiURL = 'http://locationTypeocal-backend.app:4200'
+    break;
+  case 'development-backend':
+    ENV.APP.caseusingCors = true;
+    ENV.APP.corsWithCreds = true;
+    ENV.APP.apiURL = 'https://development-backend.tld/'
+    break;
+  case 'staging-backend':
+    ENVV.APP.usingCors = true;
+    ENV.APP.corsWithCreds = true;
+    ENV.APP.apiURL = 'https://staging-backend.tld/'
+    break;
+}
+```
+
+Substitute `local-backend` for `development-backend` or `staging-backend`
+to point Ember at the other backends. Then point your browser at the
+ember server via the URL you've configured as the CORS `Origin`, e.g.,
+`http://emberapp.development-backend.tld:4200/` for the development
+environment.
+
+`ember s --environment local-backend`
+
+## Make ember cli serve uploaded files
+
+I currently work on a projet with a backend ...
+
+### 16 June 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -233,9 +279,32 @@ To see a real world example, check out [Ghost Desktop](https://github.com/trygho
 [61]: https://lonelycoding.com/ember-js-upload-file-component/
 [62]: https://gist.githubusercontent.com/keithweaver/575a61aab19711bbeb98c10785be4674/raw/ad437b4de63abcaff727cc6012b6f787da600236/s3-file-upload.js
 [63]: https://github.com/busybusy/ember-jsignature
-[99]: https://github.com/Wildhoney/EmberDroplet
-
-
+[64]: https://github.com/expo/firebase-storage-upload-example
+[65]: https://blog.gennady.pp.ua/how-to-upload-files-with-ember-js-creating-your-own-uploader/
+[66]: https://github.com/GendelfLugansk/ember-file-uploader
+[67]: http://beerlington.com/blog/2014/07/13/direct-image-uploads-with-emberjs-and-cloudinary/
+[68]: https://github.com/beerlington/cats-ui
+[69]: https://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/
+[70]: https://github.com/joshualloyd/firebase-file-upload-example
+[71]: https://github.com/expo/firebase-storage-upload-example
+[72]: https://github.com/Aathi/firebase-storage-ember-example
+[73]: https://medium.com/@lawrey/emberjs-firebase-journey-4-how-to-upload-image-to-firebase-ee49cc1d2b7b
+[74]: https://github.com/mgoren/super-rentals-with-reviews
+[75]: https://github.com/epicodus-lessons/super-rentals-with-reviews
+[76]: https://www.learnhowtoprogram.com/ember-js/ember-js/ember-data-and-firebase
+[77]: http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
+[78]: https://github.com/workmanw/embernati-upload-demo
+[79]: http://workmanw.github.io/embernati-upload-demo
+[80]: http://www.aymerick.com/2015/03/26/ember-cli-server-upload-directory.html
+[81]: https://blog.fossasia.org/set-up-firebase-to-upload-user-files/
+[82]: https://github.com/FutoRicky/ember-cli-dropzonejs
+[83]: https://www.emberscreencasts.com/posts/51-drag-and-drop-with-file-uploads
+[84]: http://emberigniter.com/modify-content-security-policy-on-new-ember-cli-app
+[85]: https://www.curiousm.com/labs/2016/08/05/using-cors-and-ember-data-to-point-an-ember-app-to-multiple-backend-deployments/
+[86]:
+[87]:
+[88]:
+[89]: https://github.com/Wildhoney/EmberDroplet
 [90]: https://github.com/HospitalRun/hospitalrun-frontend
 [91]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
 [92]: https://github.com/TryGhost/Ghost-Desktop

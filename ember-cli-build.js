@@ -9,6 +9,9 @@ module.exports = function(defaults) {
     },
     'ember-cli-babel': {
       includePolyfill: true
+    },
+    emberCliDropzonejs: {
+      includeDropzoneCss: true
     }
   });
 
