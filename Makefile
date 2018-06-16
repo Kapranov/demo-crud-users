@@ -3,6 +3,8 @@ LOCALHOST := 'localhost'
 PORT 			:= '4200'
 PATH      := node_modules/.bin:$(PATH)
 SHELL     := /usr/bin/env bash
+
+RUBYSERVICE := $(shell pgrep ruby)
 # ------------------------------------------------------------------------------
 
 default:
@@ -20,6 +22,10 @@ git-%: pub
 
 git_pull:
 				$(V)git pull
+
+kill_ruby:
+				$(V)echo "\nChecking to see if RUBY process exists:\n"
+				$(V)if [ "$(RUBYSERVICE)" ]; then killall ruby && echo "Running Ruby Service Killed"; else echo "No Running Ruby Service!"; fi
 
 pri:
 				$(V)cp ./config/environment.js.private ./config/environment.js
@@ -39,12 +45,12 @@ unit:
 start: pri
 				$(V)ember electron
 
-proxy: pri
-				$(V)ember server --proxy http://localhost:8000
+server: kill_ruby pri
+				$(V)export TERM='xterm-256color'
+				$(V)pushd ./public; ./server.rb &
 
-upload: pri
-				$(v)push ./public; ./server.rb & popd; sleep 3s
-				$(V)ember server --proxy http://localhost:8000/upload
+proxy: server
+				$(V)ember server --proxy http://localhost:8000
 
 run: pri
 				$(V)ember server
