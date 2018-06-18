@@ -301,11 +301,8 @@ I currently work on a projet with a backend ...
 [83]: https://www.emberscreencasts.com/posts/51-drag-and-drop-with-file-uploads
 [84]: http://emberigniter.com/modify-content-security-policy-on-new-ember-cli-app
 [85]: https://www.curiousm.com/labs/2016/08/05/using-cors-and-ember-data-to-point-an-ember-app-to-multiple-backend-deployments/
-[86]:
-[87]:
-[88]:
-[89]: https://github.com/Wildhoney/EmberDroplet
-[90]: https://github.com/HospitalRun/hospitalrun-frontend
-[91]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
-[92]: https://github.com/TryGhost/Ghost-Desktop
-[93]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts
+[86]: https://github.com/Wildhoney/EmberDroplet
+[87]: https://github.com/HospitalRun/hospitalrun-frontend
+[88]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
+[89]: https://github.com/TryGhost/Ghost-Desktop
+[90]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts
