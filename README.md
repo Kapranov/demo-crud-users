@@ -214,7 +214,9 @@ environment.
 
 I currently work on a projet with a backend ...
 
-### 16 June 2018 by Oleg G.Kapranov
+
+
+### 20 June 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -306,3 +308,4 @@ I currently work on a projet with a backend ...
 [88]: https://github.com/HospitalRun/hospitalrun-frontend/archive/1.0.0-beta.tar.gz
 [89]: https://github.com/TryGhost/Ghost-Desktop
 [90]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts
+[91]: https://www.base64-image.de/

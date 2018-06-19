@@ -50,7 +50,14 @@ server: kill_ruby pri
 				$(V)pushd ./public; ./server.rb &
 
 proxy: server
-				$(V)ember server --proxy http://localhost:8000
+				$(V)ember server --proxy http://api.dev.local:8000 --host api.dev.local --port 4200
+
+
+node:
+				$(V)pushd ./public; npm install; npm start &
+
+express: node
+				$(V)ember server --proxy http://api.dev.local:8000 --host api.dev.local --port 4200
 
 run: pri
 				$(V)ember server

@@ -29,7 +29,8 @@
         <td>{{user.bio}}</td>
         <td class="jumbotron">
           {{#link-to 'admin.users.show' user.id}}
-            <img class="img-circle" src={{user.avatarUrl}} alt="avatar">
+            <!-- img class="img-circle" src={{user.avatarUrl}} alt="avatar" -->
+            <img class="img-circle" src="{{user.avatarUrl}}" onerror="this.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACIM/FCAAADcklEQVR4AezbCXK0KhTF8ex/qwdKpEQKsC5vnt+HJOHchi7/O/i1yhTygTfpA/UteiAP5IE8kAfyQB7IA+H2QPhdC0NyDIdzBn/POneElJeB5LBbtLIuJJkcUsKGvrYjTQvJ3uBT7VHmg1zB4gv5PBekeHw1G2UaSHb4TibIFJBrx3cz4fUQCRiRzS+GZItB7fJCiBwYl0kvg5QNQ/PyGkgyGNx2vQJyYnym6EM8KEVtiAepqAvxoBU1IR7Eoh7Eg1rUghwgl3QgEexM0YAU8LPCh4iFQjsfskOlkw1J+EzuCCn/3hmcQXfm4kLEoLftyPXfXXFHZ44L8ejL+FL/PzktuopMSB5ynBC7KEaIEDdm1yoBHQUeJA/bshbb80hoEIf7Nqk9yYbbAguScZ+vtY6SWBbED3R0SRIHIkMdPZKdA4m4a6ufqhjcJBTIhpuMjD6IiQzIRdgPbWjnGZDY+0YPHActA+L7X6z+LNpdBIhFu8A4rkzjIRfjgdQL7cJ4SCI8kPvPfR8PCYwHcnu05MZDdjTznDN9Ox7i0KzUr5XRbjxk0IA/O+RYBiJoVtaB5Hz+9wrWH5k6K6TRlXMI3rnWcN9f4EH6KzmFsDsLnJX0p0hDgHCylAlRv4I3gRyURaN+YijLeP0CCBurGR+IrWtAdtzk14BE3JWWgCTcZeoKkGJw17ECJBrcdi0AibjPVX0Iw4E8P8SjI1dnh4hHT2V2iGzo6aiTQ4pFT1ZUIPzbwrnODTnR11GnhohHX1udGiIb+jIyNaQY6p1GtSLxvqwm5CA6FCGys64z6kJkQ2++TgwphuvgQ/gOTUimO3QgEXRHG6LviJULmd+hACl8hwqkGNDWV5oQ4TtUILLx/ydUBeK7HVJnhpz06aMJ0f/QQ50bsqErE+vckFNluOJDxKh85nyIR09e6uQQIRzDvQQS2KsrLYhRGa74kKQzXPEhnu/QgRi+QwWScVepS0CCznjFhzj+MlEHgnauLgIpaGauVSBJ58XiQwJaGVkGspM3tmoQh1ZpHYhFK1kHgla2vglkfxdIWAdyodW5DiQPvPbzU7v1UQAACAQwzL9qkMCelzrIryDVgSQQkO5AQEBmBgICAgICAgLitUBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQL4IBAQE5GAgICAgICAgIJ+UAY0KP2vekF0xAAAAAElFTkSuQmCC'" alt="avatar">
           {{/link-to}}
         </td>
         <td>{{moment-format user.updatedAt 'MMM D, YYYY h:mm:ss A'}}</td>

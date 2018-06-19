@@ -19,4 +19,8 @@ package.json.ember-try
 /config/environment.js.private
 /config/environment.js.public
 
+/public/node_modules/
+/public/package-lock.json
+
+
 electron-out/
