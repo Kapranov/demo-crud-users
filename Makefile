@@ -5,6 +5,7 @@ PATH      := node_modules/.bin:$(PATH)
 SHELL     := /usr/bin/env bash
 
 RUBYSERVICE := $(shell pgrep ruby)
+NODESERVICE := $(shell pgrep node)
 # ------------------------------------------------------------------------------
 
 default:
@@ -26,6 +27,10 @@ git_pull:
 kill_ruby:
 				$(V)echo "\nChecking to see if RUBY process exists:\n"
 				$(V)if [ "$(RUBYSERVICE)" ]; then killall ruby && echo "Running Ruby Service Killed"; else echo "No Running Ruby Service!"; fi
+
+kill_node:
+				$(V)echo "\nChecking to see if Node process exists:\n"
+				$(V)if [ "$(NODESERVICE)" ]; then killall node && echo "Running Node Service Killed"; else echo "No Running Node Service!"; fi
 
 pri:
 				$(V)cp ./config/environment.js.private ./config/environment.js
@@ -53,10 +58,15 @@ proxy: server
 				$(V)ember server --proxy http://api.dev.local:8000 --host api.dev.local --port 4200
 
 
-node:
-				$(V)pushd ./public; npm install; npm start &
+check:
+				$(V)ncu -a
+				$(V)ncu -u
+				$(V)npm install
 
-express: node
+node:
+				$(V)pushd ./public; npm start &
+
+up: node pri
 				$(V)ember server --proxy http://api.dev.local:8000 --host api.dev.local --port 4200
 
 run: pri

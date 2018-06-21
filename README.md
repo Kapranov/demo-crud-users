@@ -214,6 +214,264 @@ environment.
 
 I currently work on a projet with a backend ...
 
+## Multiple models on one page
+
+You can also make a "super model" that aggregates all of the models for
+a page  for  you.  This  is  especially  useful if you have things like
+"image"  or "media"  models that  get used several times on a page. For
+example:
+
+```js
+var MultipleChoiceQuizPage = Page.extend({
+  header: DS.attr("string"),
+  promptAudio: DS.belongsTo("media", {async: true}),
+  answerAudio: DS.belongsTo("media", {async: true}),
+  answerOptions: DS.hasMany("multipleChoiceQuizChoice", {async: true})
+});
+```
+In  your persistence  layer,  store a record for each combination of
+elements that make up a page. Then your model hook becomes something
+like:
+
+```js
+model: function(parameters){
+  return this.store.find("multipleChoiceQuizPage", parameters.id);
+}
+```
+
+In a lot of cases, I think this  is simpler than  using `RSVP.hash` in
+your model hook, making the store request directly from the component,
+or using a ton of service calls.
+
+
+I have a fairly simply app I’m working on. The `ApplicationRoute` loads
+a list of categories and displays them:
+
+* Videos
+* Articles
+
+Clicking on each of these loads the `CategoryRoute`:
+
+```js
+/videos/
+/articles/
+```
+
+Within the `CategoryRoute` I'd like to load a list of `Items` to be
+displayed within that route:
+
+```js
+/videos/video-one
+/articles/article-one
+/articles/article-two
+```
+
+This seems like it should be really simple, but I can't figure it out.
+Here's the code I've got so far, could I please get some input?
+
+The index page loads just fine, I can  click  into a category and that
+loads fine as well. I'm just having trouble trying to load the list of
+items relevant to a specific category.
+
+Note that I haven't begun implementing a "details" view for each
+individual item. That'll come later.
+
+```js
+var App = Ember.Application.create();
+
+App.Router.map(function() {
+  this.resource('index', { path: '/'});
+  this.resource('category', { path: '/:category_id'});
+});
+
+App.ApplicationRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('category');
+  }
+});
+
+App.CategoryRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('category', params.category_id);
+  }
+});
+
+App.Category = DS.Model.extend({
+  name: DS.attr('string'),
+  description: DS.attr('string'),
+  items: DS.hasMany('item'),
+});
+
+App.Item = DS.Model.extend({
+  category: DS.belongsTo('category'),
+  name: DS.attr('string'),
+  description: DS.attr('string'),
+  url: DS.attr('string'),
+  repository: DS.attr('string')
+});
+```
+
+I think I was just figuring out a similar problem: Does this help?
+[http://stackoverflow.com/a/24477302](Render Nested Navigation Sidebar).
+
+Okay. Progress, but I'm getting weird behavior now. Here's the updated
+CategoryRoute:
+
+```js
+App.CategoryRoute = Ember.Route.extend({
+  model: function (params) {
+    return Ember.RSVP.hash({
+      category: this.store.find('category', params.category_id),
+      items: this.store.find('item', params.category_id)
+    });
+  }
+});
+```
+When I click from `/` to `/components` to see no API call, but I do get
+the following error:
+
+```js
+Uncaught Error: Assertion Failed: You looked up the 'items' relationship
+on '<App.Category:ember308:components>' but some of the associated
+records were not loaded. Either make sure they are all loaded together
+with the parent record
+```
+
+If I simply reload the page I see an API call to `/api/items/components`
+which returns 2 hard coded items, but only displays the first. That
+seems consistent with the `find` method which `Returns the first item in
+the array for which the callback returns true`. So I changed:
+
+```js
+// this line
+items: this.store.find('item', params.category_id)
+// to this:
+items: this.store.find('item', {category: params.category_id})
+```
+Then I get the same error as previous when clicking into the route, but
+when I reload I get an API call to `/api/items?category=components`
+instead off `/api/items/components`. This method does however work, and
+I get the correct data on the page.
+
+So I have two questions.
+
+1. Why isn't the item data loading when I click into the route?
+2. I'd prefer to call an API endpoint directly rather than passing a
+   query string. How can I accomplish this?
+
+Anyone have ideas on the last issue I'm having?
+
+I forgot to mention, for #1, did you define the `relation as {async:true}`
+on your Model? That was my point for linking the Ember Data article. Not
+sure how I mixed that up…
+
+```js
+// app/routes/foo.js
+App.FooRoute = Ember.Route.extend({
+  model: function() {
+    return Ember.RSVP.hash({
+      users: this.store.findAll('user'),
+      tweets: this.store.findAll('tweet')
+    });
+  }
+});
+
+// app/controllers/foo.js
+App.FooController = Ember.ObjectController.extend({});
+
+// app/templates/foo.hbs
+<ul>
+  {{#each users}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each tweets}}
+    <li>{{content}}</li>
+  {{/each}}
+</ul>
+```
+
+## Loading multiple models in single route
+
+```js
+model: function() {
+  return Ember.RSVP.all([App.Model1.find(), App.Model2.find()]);
+}
+```
+
+```js
+afterModel: function() {
+  return Model.find().then(function() {
+    // Additional actions
+  });
+}
+
+afterModel: function() {
+  return Ember.RSVP.all([App.Model2.find(), App.Model3.find()]).then(function() {
+    // Additional actions
+  });
+}
+```
+
+```js
+return Ember.RSVP.hash({
+  model1: App.Model1.find(),
+  model2: App.Model2.find()
+));
+
+// Once fulfilled:
+model().then(function(hash){
+  hash.model1 // =>  <fulfilled value of App.Model1.find()>
+  hash.model2 // =>  <fulfilled value of App.Model1.find()>
+});
+```
+
+You can use the `Ember.RSVP.hash` to load several models:
+
+```js
+// app/routes/index.js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model() {
+    return Ember.RSVP.hash({
+      people: this.store.findAll('person'),
+      companies: this.store.findAll('company')
+    });
+  },
+
+  setupController(controller, model) {
+    this._super(...arguments);
+    Ember.set(controller, 'people', model.people);
+    Ember.set(controller, 'companies', model.companies);
+  }
+});
+
+// app/templates/index.js
+
+// And in your template you can refer to people and companies
+// to get the loaded data:
+
+<h2>People:</h2>
+<ul>
+  {{#each people as |person|}}
+    <li>{{person.name}}</li>
+  {{/each}}
+</ul>
+<h2>Companies:</h2>
+<ul>
+  {{#each companies as |company|}}
+    <li>{{company.name}}</li>
+  {{/each}}
+</ul>
+```
+
+## Render Nested Navigation Sidebar together with a main view
+
+
+
 
 
 ### 20 June 2018 by Oleg G.Kapranov
@@ -309,3 +567,11 @@ I currently work on a projet with a backend ...
 [89]: https://github.com/TryGhost/Ghost-Desktop
 [90]: https://github.com/discourse/discourse/tree/master/app/assets/javascripts
 [91]: https://www.base64-image.de/
+[92]: https://www.toptal.com/emberjs/a-thorough-guide-to-ember-data
+[93]: https://stackoverflow.com/questions/20521967/emberjs-how-to-load-multiple-models-on-the-same-route
+[94]: https://stackoverflow.com/questions/24469743/ember-js-render-nested-navigation-sidebar-together-with-a-main-view
+[95]: http://emberigniter.com/load-multiple-models-single-route
+[96]: http://emberjs.jsbin.com/begewoza/1/edit?html,js,output
+[97]: http://emberjs.jsbin.com/nibikufa/1/edit?html,css,js,output
+[98]: http://emberjs.jsbin.com/hituxado/1/edit?html,css,js,output
+[99]:
