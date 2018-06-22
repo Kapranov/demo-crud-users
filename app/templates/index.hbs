@@ -1,10 +1,18 @@
 <div class="jumbotron text-center">
   <h1>{{headerMessage}}</h1>
 
-  <p>Emails from social networks, media-sharing sites, <br/>
-  dating services and other social sites will be shown here.</p>
+  <p>To add user account click</p>
 
-  <p>To add or remove tabs click <a href="/">inbox settings.</a></p>
+  <div class="form-horizontal form-group form-group-lg row">
+     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+       {{input type="name" value=yourName class="form-control" placeholder="Please type your first and last name." autofocus="autofocus"}}
+     </div>
+     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+       <button class="btn btn-primary btn-lg btn-block" {{action 'saveUser'}} disabled={{isDisabled}}>Request account</button>
+     </div>
+  </div>
 
-
+   {{#if responseMessage}}
+     <div class="alert alert-success" role="alert">{{responseMessage}}</div>
+   {{/if}}
 </div>

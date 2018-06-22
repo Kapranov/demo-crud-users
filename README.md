@@ -473,6 +473,45 @@ export default Ember.Route.extend({
 http://emberigniter.com/load-multiple-models-single-route
 
 
+## Regualar expressions
+
+```js
+// models/user_registration.js
+model: function () {
+  return App.UserRegistration.create({
+    email: 'horse@bag.com',
+    password: 'shortstop',
+    accountNumber: 'ABC1234'
+  });
+}
+// controllers/index.js
+form: Ember.A([
+  {_id: "name", regex: /^[A-Za-z]+$/},
+  {_id: "pin" , regex: /^\d{4}$/}
+]),
+
+validations: {
+  email: /.@.+..+/,
+  password: /.{8}/,
+  accountNumber: /^[A-Z]{3} ?\d{4}$/i
+}
+
+// Example use of allValid function: disable submit
+disabled: function() {
+  return !this.allValid();
+}.property('email', 'password', 'accountNumber'),
+
+actions: {
+  register: function () {
+    alert('Registering with ' +
+      this.get('email') + ', ' +
+      this.get('password') + ', ' +
+      this.get('accountNumber'));
+    }
+  }
+});
+```
+
 
 
 ### 20 June 2018 by Oleg G.Kapranov
