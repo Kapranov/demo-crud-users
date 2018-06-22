@@ -25,7 +25,29 @@
   </div>
 </div>
 
-<div class="well">
+<!-- Old version by index page
+<div class="main">
+  <div class="tools">
+    <a class="button-short blue create-btn" href="#">
+      <i class="fa fa-user"></i>
+      <span>⬅ </span>
+    </a>
+    <div class="users-count">
+      Users: {{model.length}}
+    </div>
+  </div>
+  <ul class="users-listing">
+    {{#each model as |user|}}
+      <li>{{user.name}}</li>
+    {{else}}
+      <li>no users… :-(</li>
+    {{/each}}
+  </ul>
+  <div class="user-pane"></div>
+  </div>
+-->
+
+<div class="well-short">
   <ul class="nav nav-pills">
     {{#link-to 'admin.users' tagName="button" class="button active"}}Listing Users{{/link-to}}
     {{#link-to 'users.new'   tagName="button" class="button primary medium"}}Add a New User{{/link-to}}

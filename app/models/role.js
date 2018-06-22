@@ -1,11 +1,13 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  name: DS.attr('string'),
-  displayName: DS.attr('string'),
-  isGlobal: DS.attr('boolean'),
-  readOnly: DS.attr('boolean'),
-  permissions: DS.attr(),
-  createdAt: DS.attr('number'),
-  updatedAt: DS.attr('number')
+const { Model, attr } = DS;
+
+export default Model.extend({
+  name: attr('string'),
+  displayName: attr('string'),
+  isGlobal: attr('boolean'),
+  readOnly: attr('boolean'),
+  permissions: attr(),
+  createdAt: attr('number'),
+  updatedAt: attr('number')
 });

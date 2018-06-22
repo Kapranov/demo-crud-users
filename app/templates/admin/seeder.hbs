@@ -1,9 +1,33 @@
-<h1>Seeders</h1>
+<h1>Seeder, our Data Center</h1>
 
-<div class="well">
+<div class="row">
+  <div class="col-md-4">{{number-box title="Libraries" number=libraries.length}}</div>
+  <div class="col-md-4">{{number-box title="Authors" number=authors.length}}</div>
+  <div class="col-md-4">{{number-box title="Books" number=books.length}}</div>
+</div>
+
+{{seeder-block
+  sectionTitle='Libraries'
+  generateAction=(action 'generateLibraries')
+  deleteAction=(action 'deleteLibraries')
+  generateReady=libDone
+  deleteReady=libDelDone
+  generateInProgress=generateLibrariesInProgress
+  deleteInProgress=deleteLibrariesInProgress
+}}
+
+{{seeder-block
+  sectionTitle='Authors with Books'
+  generateAction=(action 'generateBooksAndAuthors')
+  deleteAction=(action 'deleteBooksAndAuthors')
+  generateReady=authDone
+  deleteReady=authDelDone
+  generateInProgress=generateBooksInProgress
+  deleteInProgress=deleteBooksInProgress
+}}
+
+<div class="well-short">
   <ul class="nav nav-pills">
     {{#link-to 'index' tagName="button" class="button primary medium active"}}Home{{/link-to}}
   </ul>
 </div>
-
-{{outlet}}

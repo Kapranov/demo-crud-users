@@ -9,10 +9,12 @@ input, textarea {
   width: 100%;
 }
 
-textarea { min-height: 45px; }
+textarea {
+  //min-height: 45px;
+}
 
 label {
   text-align: left;
-  display: block;
+  //display: block;
   margin-bottom: 2px;
 }

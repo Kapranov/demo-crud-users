@@ -1,19 +1,10 @@
-<div class="main">
-  <div class="tools">
-    <a class="button-short blue create-btn" href="#">
-      <i class="fa fa-user"></i>
-      <span>⬅ </span>
-    </a>
-    <div class="users-count">
-      Users: {{model.length}}
-    </div>
-  </div>
-  <ul class="users-listing">
-    {{#each model as |user|}}
-      <li>{{user.name}}</li>
-    {{else}}
-      <li>no users… :-(</li>
-    {{/each}}
-  </ul>
-  <div class="user-pane"></div>
+<div class="jumbotron text-center">
+  <h1>{{headerMessage}}</h1>
+
+  <p>Emails from social networks, media-sharing sites, <br/>
+  dating services and other social sites will be shown here.</p>
+
+  <p>To add or remove tabs click <a href="/">inbox settings.</a></p>
+
+
 </div>

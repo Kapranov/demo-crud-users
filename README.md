@@ -470,6 +470,7 @@ export default Ember.Route.extend({
 
 ## Render Nested Navigation Sidebar together with a main view
 
+http://emberigniter.com/load-multiple-models-single-route
 
 
 

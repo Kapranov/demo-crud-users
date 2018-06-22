@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -9,30 +9,37 @@
       </button>
       {{#link-to 'index' class="navbar-brand"}}CRUD App{{/link-to}}
     </div>
+
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
-        {{#link-to 'users' tagName="li"}}<a href="">Users</a>{{/link-to}}
+        {{#nav-link-to 'invitations'}}Invite{{/nav-link-to}}
+        {{#nav-link-to 'users'}}Users{{/nav-link-to}}
+        {{#nav-link-to 'libraries'}}Libraries{{/nav-link-to}}
+        {{#nav-link-to 'authors'}}Authors{{/nav-link-to}}
+        {{#nav-link-to 'books'}}Books{{/nav-link-to}}
+        {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
+        {{#nav-link-to 'render_nested'}}Nested{{/nav-link-to}}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{#nav-link-to 'about'}}About{{/nav-link-to}}
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Admin
-            <span class="caret"></span>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Admin<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
+            {{#nav-link-to 'admin.users'}}Users{{/nav-link-to}}
+            {{#nav-link-to 'admin.invitations'}}Invitations{{/nav-link-to}}
+            {{#nav-link-to 'admin.contacts'}}Contacts{{/nav-link-to}}
+            {{#nav-link-to 'admin.roles'}}Roles{{/nav-link-to}}
+            {{#nav-link-to 'signatures'}}Signature Pad{{/nav-link-to}}
             <li role="separator" class="divider"></li>
-            {{#link-to 'admin.users' tagName="li"}}<a href="">Users</a>{{/link-to}}
+            {{#nav-link-to 'admin.seeder'}}Seeders{{/nav-link-to}}
             <li role="separator" class="divider"></li>
-            {{#link-to 'admin.roles' tagName="li"}}<a href="">Roles</a>{{/link-to}}
-              <li role="separator" class="divider"></li>
-            {{#link-to 'admin.seeder' tagName="li"}}<a href="">Seeders</a>{{/link-to}}
-            <li role="separator" class="divider"></li>
-            {{#link-to 'uploads' tagName="li"}}<a href="">Upload Files</a>{{/link-to}}
-            <li role="separator" class="divider"></li>
-            {{#link-to 'signatures' tagName="li"}}<a href="">Signature Pad</a>{{/link-to}}
-            <li role="separator" class="divider"></li>
+            {{#nav-link-to 'attachments'}}Upload Files v1{{/nav-link-to}}
+            {{#nav-link-to 'uploads'}}Upload Files v2{{/nav-link-to}}
           </ul>
         </li>
-        {{#link-to 'attachments' tagName="li"}}<a href="">Attach</a>{{/link-to}}
-        {{#link-to 'about' tagName="li"}}<a href="">About</a>{{/link-to}}
       </ul>
     </div>
   </div>

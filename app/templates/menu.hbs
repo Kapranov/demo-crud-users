@@ -1,0 +1,15 @@
+<div style="float:left">
+  {{#each lib in libs}}
+    {{#link-to "library" lib}}{{lib.name}}{{/link-to}}<br/>
+  {{/each}}
+</div>
+<div style="float:left">
+  {{#each book in books}}
+    {{#link-to "book" book}}{{book.name}}{{/link-to}}<br/>
+  {{/each}}
+</div>
+<div style="float:left">
+  {{#each page in pages}}
+    {{#link-to "page" page}}{{page.name}}{{/link-to}}<br/>
+  {{/each}}
+</div>
