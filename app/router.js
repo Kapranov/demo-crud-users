@@ -14,8 +14,8 @@ Router.map(function() {
   this.route('contact');
   this.route('invitations');
   this.route('signatures');
-  this.route('reports');
   this.route('render_nested');
+  this.route('reports');
   this.route('uploads');
 
   this.route('index', { path: "/" });

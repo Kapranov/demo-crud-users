@@ -2,7 +2,9 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return this.store.findAll('user').then(
+    const store = this.store;
+
+    return store.findAll('user').then(
       results => results.sortBy('name')
     );
   },

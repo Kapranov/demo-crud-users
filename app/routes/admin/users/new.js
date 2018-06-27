@@ -3,7 +3,9 @@ import firebase from 'firebase';
 
 export default Route.extend({
   model() {
-    return this.store.createRecord('user');
+    const store = this.store;
+
+    return store.createRecord('user');
   },
 
   setupController(controller, model) {

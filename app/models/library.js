@@ -5,9 +5,9 @@ import Faker from 'faker';
 const { Model, attr, hasMany } = DS;
 
 export default Model.extend({
-  name: attr('string'),
+  name:    attr('string'),
   address: attr('string'),
-  phone: attr('string'),
+  phone:   attr('string'),
 
   books: hasMany('book', { inverse: 'library', async: true }),
 

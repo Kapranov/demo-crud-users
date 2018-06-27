@@ -4,7 +4,7 @@ import Faker from 'faker';
 const { Model, attr, belongsTo } = DS;
 
 export default Model.extend({
-  title: attr('string'),
+  title:       attr('string'),
   releaseYear: attr('date'),
 
   author:  belongsTo('author', { inverse: 'books', async: true }),

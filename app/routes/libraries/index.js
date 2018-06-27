@@ -7,11 +7,13 @@ export default Route.extend({
   },
 
   model(params) {
+    const store = this.store;
+
     if (params.limit === 'all') {
-      return this.store.findAll('library');
+      return store.findAll('library');
     }
 
-    return this.store.query('library', {
+    return store.query('library', {
       orderBy: 'name',
       startAt: params.letter,
       endAt: params.letter+"\uf8ff"

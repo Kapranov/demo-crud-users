@@ -2,7 +2,9 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return this.store.createRecord('library');
+    const store = this.store;
+
+    return store.createRecord('library');
   },
 
   setupController(controller, model) {

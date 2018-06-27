@@ -2,7 +2,9 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return this.store.createRecord('contact');
+    const store = this.store;
+
+    return store.createRecord('contact');
   },
 
   actions: {

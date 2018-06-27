@@ -3,7 +3,9 @@ import firebase from 'firebase';
 
 export default Route.extend({
   model(params) {
-    return this.store.find('user', params.user_id);
+    const store = this.store;
+
+    return store.find('user', params.user_id);
   },
 
   setupController(controller, model) {

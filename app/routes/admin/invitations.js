@@ -2,6 +2,8 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return this.store.findAll('invitation');
+    const store = this.store;
+
+    return store.findAll('invitation');
   }
 });

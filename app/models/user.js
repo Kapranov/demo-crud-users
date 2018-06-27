@@ -5,14 +5,16 @@ const { Model, attr, hasMany } = DS;
 
 export default Model.extend({
   avatarPath: '/assets/images/avatars/',
-  name: attr('string', { defaultValue: 'Your FullName' }),
-  email: attr('string', { defaultValue: 'Your Mail Box' }),
-  bio: attr('string', { defaultValue: 'Your Biography' }),
+
+  name:       attr('string', { defaultValue: 'Your FullName' }),
+  email:      attr('string', { defaultValue: 'Your Mail Box' }),
+  bio:        attr('string', { defaultValue: 'Your Biography' }),
   avatarFile: attr('string', { defaultValue: 'donald.png' }),
-  spent: attr('dollars', { defaultValue: 0 }),
-  updatedAt: attr('number'),
-  createdAt: attr('number'),
-  roles: hasMany('role', { async: true }),
+  spent:      attr('dollars',{ defaultValue: 0 }),
+  updatedAt:  attr('number'),
+  createdAt:  attr('number'),
+  roles:      hasMany('role', { async: true }),
+
   avatarUrl: computed('avatarPath', 'avatarFile', function(){
     return `${this.get('avatarPath')}${this.get('avatarFile')}`;
   }),

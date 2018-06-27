@@ -4,8 +4,10 @@ import firebase from 'firebase';
 
 export default Route.extend({
   model(params) {
+    const store = this.store;
     console.log(params.id);
-    return this.store.find('user', params.id);
+
+    return store.find('user', params.id);
   },
 
   setupController(controller, model) {

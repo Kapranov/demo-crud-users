@@ -5,7 +5,9 @@ export default Route.extend({
   avatarPath: '/assets/images/avatars/',
 
   model() {
-    return this.store.createRecord('user');
+    const store = this.store;
+
+    return store.createRecord('user');
   },
 
   setupController(controller, model) {

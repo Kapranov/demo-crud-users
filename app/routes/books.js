@@ -3,10 +3,12 @@ import { hash } from 'rsvp';
 
 export default Route.extend({
   model() {
+    const store = this.store;
+
     return hash({
-      books:     this.store.findAll('book'),
-      authors:   this.store.findAll('author'),
-      libraries: this.store.findAll('library')
+      books:     store.findAll('book'),
+      authors:   store.findAll('author'),
+      libraries: store.findAll('library')
     });
   },
 

@@ -4,7 +4,7 @@ import { match, gte, and, not } from '@ember/object/computed';
 const { Model, attr } = DS;
 
 export default Model.extend({
-  email: attr('string'),
+  email:   attr('string'),
   message: attr('string'),
 
   isValidEmail: match('email', /^.+@.+\..+$/),
