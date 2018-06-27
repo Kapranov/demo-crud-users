@@ -15,7 +15,6 @@ Router.map(function() {
   this.route('invitations');
   this.route('signatures');
   this.route('render_nested');
-  this.route('reports');
   this.route('uploads');
 
   this.route('index', { path: "/" });
@@ -50,6 +49,10 @@ Router.map(function() {
       this.route('show');
     });
   });
+  this.route("reports", { path: "/reports" });
+  this.route("report",  { path: "/reports/:report" });
+  this.route("list",    { path: "/reports/:report/lists/:list" });
+  this.route("page",    { path: "/reports/:report/lists/:list/pages/:page" });
 });
 
 Router.extend({

@@ -1,3 +1,14 @@
+<h3>Local Storage model</h3>
+
+<ul>
+{{#each model as |participants|}}
+<ol>{{participants.id}}. {{participants.name}} ({{participants.institute}})</ol>
+{{/each}}
+</ul>
+
 <h3>Render Nested Navigation Sidebar together with a main view</h3>
 
-{{outlet}}
+<p>All Reports</p>
+
+<div style="float:left">{{partial 'menu'}}</div>
+<div style="float:left;margin-left:30%">{{outlet}}</div>

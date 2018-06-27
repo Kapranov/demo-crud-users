@@ -366,3 +366,11 @@ th.wider {
   vertical-align: middle;
 }
 
+.list.active {
+  color: #337ab7;
+  text-decoration: none;
+  background-color: lightgrey;
+  border-radius:4px;
+  margin: 8px;
+  padding: 4px;
+}
