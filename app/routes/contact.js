@@ -12,10 +12,6 @@ export default Route.extend({
       newContactMessage.save().then(() => this.controller.set('responseMessage', true));
     },
 
-    cancel() {
-      this.transitionTo('index');
-    },
-
     willTransition() {
       let model = this.controller.get('model');
 

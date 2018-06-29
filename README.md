@@ -512,9 +512,48 @@ actions: {
 });
 ```
 
+```js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model() {
+    this.store.createRecord('dupe', {
+      "message": "hello world one",
+      "posted": "2016-06-05T10:11:01.473Z",
+      "user": "v3ss0n"
+    }).save()
+    return this.store.findAll("dupe")
+  }
+});
+
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+
+export default Model.extend({
+  message: attr('string'),
+  posted: attr('date', {
+    defaultValue() { return new Date(); }
+  }),
+  user: attr('string')
+});
+
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model() {
+    return this.store.createRecord('dupe', {
+      "message": "hello world one",
+      "posted": "2016-06-05T10:11:01.473Z",
+      "user": "v3ss0n"
+    }).save().then(() => {
+      return this.store.findAll('dupe');
+    });
+  }
+});
+```
 
 
-### 20 June 2018 by Oleg G.Kapranov
+### 28 June 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -615,3 +654,14 @@ actions: {
 [97]: http://emberjs.jsbin.com/nibikufa/1/edit?html,css,js,output
 [98]: http://emberjs.jsbin.com/hituxado/1/edit?html,css,js,output
 [99]:
+
+
+https://github.com/simplabs/ember-simple-auth
+https://github.com/firebase/emberfire/blob/master/docs/guide/authentication.md
+http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
+https://blog.isnorcreative.com/2016/07/30/ember-firebase.html
+https://medium.com/ecmastack/send-emails-with-ember-js-amazon-ses-firebase-d0fa360cd2ce
+https://stackoverflow.com/questions/42640039/firebase-3-authentication-with-emberfire-and-torii
+https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
+http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2

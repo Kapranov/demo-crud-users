@@ -21,5 +21,13 @@ let participants = [
 export default Route.extend({
   model() {
     return participants;
-  }
+  },
+
+  //renderTemplate() {
+  //  this.render('menu', {
+  //    into: 'application',
+  //    outlet: 'menu'
+  //  });
+  //  this._super();
+  //}
 });

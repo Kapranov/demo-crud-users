@@ -57,7 +57,8 @@
     "emberfire": "^2.0.10",
     "eslint-plugin-ember": "^5.2.0",
     "liquid-fire": "^0.29.3",
-    "loader.js": "^4.7.0"
+    "loader.js": "^4.7.0",
+    "torii": "^0.10.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
