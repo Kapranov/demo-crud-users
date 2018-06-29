@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
+//import md5 from 'md5';
 
 const { Model, attr, hasMany } = DS;
 

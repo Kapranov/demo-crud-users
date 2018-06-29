@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about');
   this.route('attachments');
+  this.route('avatar');
   this.route('authors');
   this.route('books');
   this.route('contact');
