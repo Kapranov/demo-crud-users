@@ -15,6 +15,15 @@ export default Model.extend({
   createdAt:  attr('number'),
   roles:      hasMany('role', { async: true }),
 
+  firstName:  attr('string'),
+  created:    attr('number'),
+  username:   computed(function() {
+    return this.get('id');
+  }),
+  avatar:     computed(function() {
+    return 'https://www.gravatar.com/avatar/' + md5(this.get('id')) + '.jpg?d=retro&size=80';
+  }),
+
   avatarUrl: computed('avatarPath', 'avatarFile', function(){
     return `${this.get('avatarPath')}${this.get('avatarFile')}`;
   }),
