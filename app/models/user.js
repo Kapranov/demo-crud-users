@@ -13,17 +13,18 @@ export default Model.extend({
   spent:      attr('dollars',{ defaultValue: 0 }),
   updatedAt:  attr('number'),
   createdAt:  attr('number'),
+
   roles:      hasMany('role', { async: true }),
 
   firstName:  attr('string'),
   created:    attr('number'),
-  username:   computed(function() {
+
+  username: computed(function() {
     return this.get('id');
   }),
-  avatar:     computed(function() {
+  avatar: computed(function() {
     return 'https://www.gravatar.com/avatar/' + md5(this.get('id')) + '.jpg?d=retro&size=80';
   }),
-
   avatarUrl: computed('avatarPath', 'avatarFile', function(){
     return `${this.get('avatarPath')}${this.get('avatarFile')}`;
   }),

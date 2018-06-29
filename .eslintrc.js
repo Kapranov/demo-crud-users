@@ -16,7 +16,8 @@ module.exports = {
   },
   globals: {
     "Droplet": true,
-    "excerpt": true
+    "excerpt": true,
+    "md5": true
   },
   rules: {
     'no-console':  process.env.NODE_ENV === 'development' ? 2 : 0,

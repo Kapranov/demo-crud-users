@@ -7,7 +7,7 @@ export default Model.extend({
   displayName: attr('string'),
   isGlobal:    attr('boolean'),
   readOnly:    attr('boolean'),
-  permissions: attr(),
+  permissions: attr(null),
   createdAt:   attr('number'),
   updatedAt:   attr('number')
 });

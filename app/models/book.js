@@ -8,7 +8,7 @@ export default Model.extend({
   releaseYear: attr('date'),
 
   author:  belongsTo('author', { inverse: 'books', async: true }),
-  library: belongsTo('library', { inverse: 'books', async: true }),
+  library: belongsTo('library',{ inverse: 'books', async: true }),
 
   randomize(author, library) {
     this.set('title', this._bookTitle());
