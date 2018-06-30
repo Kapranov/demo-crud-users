@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { match, not } from '@ember/object/computed';
+import { get } from '@ember/object';
 import firebase from 'firebase';
 
 export default Controller.extend({
@@ -13,7 +14,7 @@ export default Controller.extend({
 
   actions: {
     saveUser() {
-      const name  = this.get('yourName');
+      const name  = get(this, 'yourName');
       const transform = firebase.database.ServerValue.TIMESTAMP;
       const newUser = this.store.createRecord('user', {
         name: name,

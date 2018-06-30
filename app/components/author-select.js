@@ -11,6 +11,6 @@ export default Component.extend({
     const selectedAuthorId = event.target.value;
     const selectedAuthor = get(this, 'authors').find((record) => record.id === selectedAuthorId);
 
-    get(this, 'press_author')(selectedAuthor, this.get('book'));
+    get(this, 'press_author')(selectedAuthor, get(this, 'book'));
   }
 });

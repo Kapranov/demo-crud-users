@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
 import { equal } from '@ember/object/computed';
 
 export default Controller.extend({
@@ -9,8 +9,8 @@ export default Controller.extend({
   limit: 'all',
   limitAll: equal('limit', 'all'),
   filteredList: computed('model.@each.name', 'filter', function() {
-    let results = this.get('model');
-    const query = this.get('filter');
+    let results = get(this, 'model');
+    const query = get(this, 'filter');
 
     if (query) {
       const regexString = '(' + query.split(' ').join(')+.*(') + ')+.*';

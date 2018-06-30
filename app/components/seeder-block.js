@@ -18,8 +18,8 @@ export default Component.extend({
 
   actions: {
     generateAction() {
-      if (this.get('isCounterValid')) {
-        get(this, 'generateAction')(this.get('counter'));
+      if (get(this, 'isCounterValid')) {
+        get(this, 'generateAction')(get(this, 'counter'));
       }
     },
 

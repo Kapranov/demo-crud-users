@@ -1,6 +1,6 @@
 import DS from 'ember-data';
-import { computed } from '@ember/object';
-//import md5 from 'md5';
+import { computed, get } from '@ember/object';
+import md5 from 'md5';
 
 const { Model, attr, hasMany } = DS;
 
@@ -21,18 +21,18 @@ export default Model.extend({
   created:    attr('number'),
 
   username: computed(function() {
-    return this.get('id');
+    return get(this, 'id');
   }),
   avatar: computed(function() {
-    return 'https://www.gravatar.com/avatar/' + md5(this.get('id')) + '.jpg?d=retro&size=80';
+    return 'https://www.gravatar.com/avatar/' + md5(get(this, 'id')) + '.jpg?d=retro&size=80';
   }),
   avatarUrl: computed('avatarPath', 'avatarFile', function(){
-    return `${this.get('avatarPath')}${this.get('avatarFile')}`;
+    return `${get(this, 'avatarPath')}${get(this, 'avatarFile')}`;
   }),
   createdMonth: computed('createdAt', function(){
-    return this.get('createdAt').getMonth() + 1
+    return get(this, 'createdAt').getMonth() + 1
   }),
   fullInfo: computed('name', 'email', function(){
-    return (this.get('name')) + ' ' + (this.get('email'));
+    return (get(this, 'name')) + ' ' + (get(this, 'email'));
   })
 });

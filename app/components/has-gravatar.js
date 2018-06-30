@@ -1,7 +1,6 @@
 import Component from '@ember/component';
-import { getProperties } from '@ember/object';
+import { set, getProperties } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { set } from '@ember/object';
 
 export default Component.extend({
   gravatar: service(),

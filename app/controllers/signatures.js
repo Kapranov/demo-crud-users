@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
 import { A as a } from '@ember/array';
 
 export default Controller.extend({
@@ -12,7 +12,7 @@ export default Controller.extend({
   }),
 
   stringifiedSignature: computed('signature.[]', function() {
-    return JSON.stringify(this.get('signature'));
+    return JSON.stringify(get(this, 'signature'));
   }),
 
   actions: {
@@ -23,12 +23,12 @@ export default Controller.extend({
     undo() {
       let lastNewLine;
 
-      this.get('signature').forEach((item, index) => {
+      get(this, 'signature').forEach((item, index) => {
         if (item[0] === 1) {
           lastNewLine = index;
         }
       });
-      this.set('signature', a(this.get('signature').slice(0, lastNewLine)));
+      this.set('signature', a(get(this, 'signature').slice(0, lastNewLine)));
     }
   }
 });

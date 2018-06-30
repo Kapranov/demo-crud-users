@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
 import moment from 'moment';
 
 const {
@@ -17,6 +17,6 @@ export default Model.extend({
   user:     belongsTo('user',  { async: true }),
 
   publishedDate: computed('published', function() {
-    return moment(this.get('published')).format('MMMM Do, YYYY');
+    return moment(get(this, 'published')).format('MMMM Do, YYYY');
   })
 });

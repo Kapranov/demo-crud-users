@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { match, not } from '@ember/object/computed';
+import { get } from '@ember/object';
 
 export default Controller.extend({
   headerMessage: 'Coming Soon',
@@ -11,7 +12,7 @@ export default Controller.extend({
 
   actions: {
     saveInvitation() {
-      const email = this.get('emailAddress');
+      const email = get(this, 'emailAddress');
       const newInvitation = this.store.createRecord('invitation', {
         email: email
       });

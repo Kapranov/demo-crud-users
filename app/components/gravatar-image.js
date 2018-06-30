@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
 import md5 from 'md5';
 
 export default Component.extend({
@@ -15,18 +15,18 @@ export default Component.extend({
   hash: null,
 
   src: computed('email', 'imageSize', 'default', 'hash', function() {
-    var email = this.get('email');
-    var imageSize = this.get('imageSize');
-    var def = this.get('defaultImage');
-    var secure = this.get('secure');
-    var protocol = secure ? 'https' : 'http';
-    var hashToUse = this.get('hash') || md5(email);
+    const email = get(this, 'email');
+    const imageSize = get(this, 'imageSize');
+    const def = get(this, 'defaultImage');
+    const secure = get(this, 'secure');
+    const protocol = secure ? 'https' : 'http';
+    const hashToUse = get(this, 'hash') || md5(email);
 
     return protocol + '://www.gravatar.com/avatar/' + hashToUse + '?s=' + imageSize + '&d=' + def;
   }),
 
   imageSize: computed('size', 'retina', function() {
-    var size = this.get('size');
-    return this.get('retina') ? (size * 2) : size;
+    const size = get(this, 'size');
+    return get(this, 'retina') ? (size * 2) : size;
   })
 });

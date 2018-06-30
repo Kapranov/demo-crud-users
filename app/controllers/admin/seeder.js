@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { get } from '@ember/object';
 import { all } from 'rsvp';
 import Faker from "faker";
 
@@ -23,7 +24,7 @@ export default Controller.extend({
 
     deleteLibraries() {
       this.set('deleteLibrariesInProgress', true);
-      this._destroyAll(this.get('libraries'))
+      this._destroyAll(get(this, 'libraries'))
         .then(() => {
           this.set('libDelDone', true);
           this.set('deleteLibrariesInProgress', false);
@@ -51,8 +52,8 @@ export default Controller.extend({
     deleteBooksAndAuthors() {
       this.set('deleteBooksInProgress', true);
 
-      const authors = this.get('authors');
-      const books = this.get('books');
+      const authors = get(this, 'authors');
+      const books = get(this, 'books');
 
       this._destroyAll(authors)
         .then(() => this._destroyAll(books))
@@ -92,7 +93,7 @@ export default Controller.extend({
   },
 
   _selectRandomLibrary() {
-    const libraries = this.get('libraries');
+    const libraries = get(this, 'libraries');
     const size = libraries.get('length');
     const randomItem = Faker.random.number(size - 1);
 

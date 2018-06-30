@@ -9,8 +9,8 @@ export default Component.extend({
 
   change(event) {
     const selectedLibraryId = event.target.value;
-    const selectedLibrary = this.get('libraries').find((record) => record.id === selectedLibraryId);
+    const selectedLibrary = get(this, 'libraries').find((record) => record.id === selectedLibraryId);
 
-    get(this, 'press_select')(selectedLibrary, this.get('book'));
+    get(this, 'press_select')(selectedLibrary, get(this, 'book'));
   }
 });
