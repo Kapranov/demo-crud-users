@@ -552,8 +552,74 @@ export default Ember.Route.extend({
 });
 ```
 
+## Workflow with ember-data and ajax call
 
-### 28 June 2018 by Oleg G.Kapranov
+```js
+// routes/index.js
+
+model() {
+  const mapData = ajax({
+    url: '*********************',
+    type: 'get'
+  });
+
+  return mapData.then((data) => {
+    return this.store.pushPayload(data);
+  });
+}
+
+// models
+
+import DS from "ember-data";
+
+export default DS.Model.extend({
+  gmap_lat_center: DS.attr('string'),
+  gmap_long_center: DS.attr('string'),
+  hotspots: DS.attr('array'),
+  id: DS.attr('string'),
+  image: DS.attr('array'),
+  image_highres: DS.attr('string'),
+  image_lowres: DS.attr('string'),
+  map_background: DS.attr('string'),
+  ne_lat: DS.attr('string'),
+  ne_long: DS.attr('string'),
+  order: DS.attr('string'),
+  sw_lat: DS.attr('string'),
+  sw_long: DS.attr('string'),
+  timestmap: DS.attr('string'),
+  title: DS.attr('string'),
+  track_geojson: DS.attr('string'),
+  type: DS.attr('string'),
+  zoom: DS.attr('string')
+});
+
+// routes
+
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  setupController(controller, model) {
+    this._super(controller, model);
+    this.set(controller, 'someAttrForTheController', 'anything');
+    console.log('maps: ', model);
+  }
+});
+
+// controllers
+
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+  latLongCenters: Ember.computed('model', function() {
+    const models = this.get('model');
+    return model.map(function(map) {
+      return [map.get('gmap_lat_center'), map.get('gmap_long_center')];
+    });
+  })
+});
+```
+
+### 30 June 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -664,3 +730,20 @@ export default Ember.Route.extend({
 [106]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
 [107]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
 [108]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2
+
+[110]: https://medium.com/@eve.essex/implementing-direct-aws-file-uploads-in-ember-js-with-rails-backend-518139bc89c2
+[111]: https://github.com/ga-wdi-boston/capstone-project/issues/287
+[112]: https://github.com/awslabs/aws-mobilehub-ember
+[113]: https://aws.amazon.com/blogs/mobile/deploying-an-emberjs-mobile-web-application-mobile-hub/
+[114]: https://aws.amazon.com/blogs/developer/creating-and-deploying-a-serverless-web-application-with-cloudformation-and-ember-js/
+[115]: https://puppet.com/docs/pipelines-for-apps/free/application-emberjs.html
+[116]: https://stackoverflow.com/questions/38088565/add-a-favicon-to-aws-s3-ember-js
+[117]: http://mockra.com/2016/02/13/ember-s3-file-upload
+[118]: https://www.youtube.com/watch?v=5MxJl4ZA0Us
+[119]: https://emberigniter.com/deploy-ember-cli-app-amazon-s3-linux-ssh-rsync
+[120]: https://www.emberscreencasts.com/posts/48-upload-a-file-as-part-of-a-form
+[121]: https://smashingboxes.com/blog/image-upload-in-phoenix/
+[122]: https://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/
+[123]: https://medium.com/developers-writing/writing-an-ember-backend-in-phoenix-f39f12725377
+
+[150]: http://kevin.pfefferle.co/liquid-fire-reveal/
