@@ -730,6 +730,7 @@ export default Ember.Controller.extend({
 [106]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
 [107]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
 [108]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2
+[109]:
 
 [110]: https://medium.com/@eve.essex/implementing-direct-aws-file-uploads-in-ember-js-with-rails-backend-518139bc89c2
 [111]: https://github.com/ga-wdi-boston/capstone-project/issues/287
@@ -747,3 +748,8 @@ export default Ember.Controller.extend({
 [123]: https://medium.com/developers-writing/writing-an-ember-backend-in-phoenix-f39f12725377
 
 [150]: http://kevin.pfefferle.co/liquid-fire-reveal/
+[151]: https://github.com/kpfefferle/rumbrella
+[152]: https://github.com/kpfefferle/rumbl
+[100]: https://www.emberscreencasts.com/posts/92-promises-basics
+[101]: https://emberigniter.com/render-promise-before-it-resolves/
+[102]: https://balinterdi.com/blog/promises-instead-of-callbacks/
