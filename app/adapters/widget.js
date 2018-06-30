@@ -1,5 +1,4 @@
 import ApplicationAdapter from './application';
-import DS from 'ember-data';
 import { resolve } from 'rsvp';
 
 export default ApplicationAdapter.extend({
@@ -7,10 +6,7 @@ export default ApplicationAdapter.extend({
     return resolve({
       data: [{
         id: '1',
-        type: 'widget',
-        attributes: {
-          name: "WIDGET 1"
-        }
+        name: "WIDGET 1"
       }]
     });
   },
@@ -19,10 +15,7 @@ export default ApplicationAdapter.extend({
     return resolve({
       data: {
         id: '2',
-        type: 'widget',
-        attributes: {
-          name: "WIDGET 2",
-        }
+        name: "WIDGET 2",
       }
     });
   },
@@ -33,10 +26,7 @@ export default ApplicationAdapter.extend({
     return resolve({
       data: {
         id: id,
-        type: 'widget',
-        attributes: {
-          name: `WIDGET ${id} - UPDATED`,
-        }
+        name: `WIDGET ${id} - UPDATED`,
       },
 
       included: [],
