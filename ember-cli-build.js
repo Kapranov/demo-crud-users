@@ -16,7 +16,6 @@ module.exports = function(defaults) {
   });
 
   app.import('node_modules/ember-droplet/dist/ember-droplet.js');
-  //app.import('node_modules/blueimp-md5/js/md5.js');
 
   return app.toTree();
 };

@@ -5,6 +5,14 @@
   <br>
   <div>
     <img class="img-circle" src={{model.avatarUrl}} alt="avatar"/>
+    {{gravatar-image email=model.email
+      title=model.name
+      alt=model.bio
+      defaultImage='identicon'
+      class='img-circle'
+      secure=false
+      size=250
+      retina=true}}
   </div>
   <br>
   <div>
