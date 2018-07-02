@@ -17,10 +17,16 @@ Router.map(function() {
   this.route('signatures');
   this.route('render_nested');
   this.route('uploads');
-
-  this.route('index', { path: "/" });
-
+  this.route('index',   { path: "/" });
   this.route('missing', { path: '/*path' });
+  this.route("reports", { path: "/reports" });
+  this.route("report",  { path: "/reports/:report" });
+  this.route("list",    { path: "/reports/:report/lists/:list" });
+  this.route("page",    { path: "/reports/:report/lists/:list/pages/:page" });
+  this.route('post',    { path: '/post/:post_id' });
+  this.route('posts',   { path: '/posts' }, function() {
+    this.route('new');
+  });
 
   this.route('users', function() {
     this.route('new');
@@ -50,10 +56,6 @@ Router.map(function() {
       this.route('show');
     });
   });
-  this.route("reports", { path: "/reports" });
-  this.route("report",  { path: "/reports/:report" });
-  this.route("list",    { path: "/reports/:report/lists/:list" });
-  this.route("page",    { path: "/reports/:report/lists/:list/pages/:page" });
 });
 
 Router.extend({

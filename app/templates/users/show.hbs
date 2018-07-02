@@ -13,6 +13,14 @@
       secure=false
       size=250
       retina=true}}
+
+    {{!#has-gravatar email='test@gmail.com' as |g|}}
+      {{!#if g.has}}
+        {{!g.image}}
+      {{!else}}
+        <!-- No gravatar found! -->
+      {{!/if}}
+    {{!/has-gravatar}}
   </div>
   <br>
   <div>
