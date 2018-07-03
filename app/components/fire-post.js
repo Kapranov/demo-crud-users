@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { Promise, hash } from 'rsvp';
+//import { Promise, hash } from 'rsvp';
 
 export default Component.extend({
   classNames: ['post'],
@@ -22,7 +22,7 @@ export default Component.extend({
 
     },
 
-    removeComment: function(comment) {
+    removeComment: function() {
 
     }
   }
