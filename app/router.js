@@ -23,6 +23,7 @@ Router.map(function() {
   this.route('report',  { path: '/reports/:report' });
   this.route('list',    { path: '/reports/:report/lists/:list' });
   this.route('page',    { path: '/reports/:report/lists/:list/pages/:page' });
+  this.route('post',    { path: '/post/:post_id' });
   this.route('posts', function() {
     this.route('new');
   });

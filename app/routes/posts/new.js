@@ -1,10 +1,26 @@
 import Route from '@ember/routing/route';
 import firebase from 'firebase';
+import EmberObject from '@ember/object';
 
 export default Route.extend({
+  init() {
+    this._super(...arguments);
+    this.set('post', EmberObject.create());
+  },
+
   model() {
     const store = this.store;
     return store.createRecord('post');
+  },
+
+  postIsValid() {
+    let isValid = true;
+    ['post.title', 'post.username', 'post.body'].forEach(function(field) {
+      if (this.get(field) === '') {
+        isValid = false;
+      }
+    }, this);
+    return isValid;
   },
 
   actions: {

@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { computed } from '@ember/object';
 
 export default Route.extend({
   queryParams: {
@@ -13,6 +14,10 @@ export default Route.extend({
       limitToLast: 2
     }, params).then(model => model.sortBy('published').reverse());
   },
+
+  posts: computed.sort('model', function (a, b) {
+    return b.get('published') - a.get('published');
+  }),
 
   actions: {
     refreshModel() {
