@@ -746,6 +746,13 @@ export default Ember.Controller.extend({
 [121]: https://smashingboxes.com/blog/image-upload-in-phoenix/
 [122]: https://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/
 [123]: https://medium.com/developers-writing/writing-an-ember-backend-in-phoenix-f39f12725377
+[124]: https://kevink.me/2015/10/23/creating-a-sortable-table-component-in-ember-js/
+[125]: https://github.com/kevinkucharczyk/ember-dynamic-table
+[126]: https://www.theguild.nl/sorting-displayed-data-in-ember-js/
+[127]: https://www.emberjs.com/api/ember/release/functions/@ember%2Fobject%2Fcomputed/sort
+[128]: https://blog.isnorcreative.com/2016/02/11/ember-custom-sort.html
+[129]: https://emberjs.com/api/ember/release/functions/@ember%2Fobject/computed?anchor=sort&show=inherited,protected,private,deprecated&type=method#
+
 
 [150]: http://kevin.pfefferle.co/liquid-fire-reveal/
 [151]: https://github.com/kpfefferle/rumbrella

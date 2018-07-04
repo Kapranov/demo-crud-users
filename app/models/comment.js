@@ -8,10 +8,10 @@ export default Model.extend({
   body:      attr('string'),
   published: attr('number'),
 
-  user: belongsTo('user', { async: true }),
-
   publishedDate: computed('published', function() {
     var m = moment(get(this, 'published'));
     return `${m.format('MMMM Do, YYYY')} at ${m.format('h:mm:ss a')}`;
-  })
+  }),
+
+  user: belongsTo('user', { async: true })
 });

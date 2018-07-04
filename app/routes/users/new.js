@@ -6,7 +6,6 @@ export default Route.extend({
 
   model() {
     const store = this.store;
-
     return store.createRecord('user');
   },
 

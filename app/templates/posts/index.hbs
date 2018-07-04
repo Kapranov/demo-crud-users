@@ -1,5 +1,16 @@
-<ul class="posts">
-  {{#each posts as |post|}}
-    {{fire-post-slug post=post}}
+{{#link-to 'posts.new' tagName="button" class="button primary medium active"}}Add a New Post{{/link-to}}
+<section>
+  {{#each model as |post|}}
+  <div>
+    <span>{{post.publishedDate}}</span> |
+    <span>{{post.id}}</span> |
+    <span>{{post.title}}</span> |
+    <span>{{post.body}}</span> |
+    <span>{{moment-format post.published 'MMM D, YYYY h:mm:ss A'}}</span>
+    <br/>
+    <div>
+        <button class="btn btn-danger remove" {{action 'deletePost' post}}><span class="fa fa-minus"></span> Remove</button>
+    </div>
+  </div>
   {{/each}}
-</ul>
+</section>
