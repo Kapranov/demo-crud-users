@@ -1,1 +1,7 @@
-{{fire-post post=model isExpanded=true isSingle=true onPublishComment="publishComment"}}
+<h2>This post</h2>
+{{!fire-post post=model isExpanded=true isSingle=true onPublishComment="publishComment"}}
+{{model.id}} - {{model.title}} - {{model.body}} - {{model.published}} - {{model.publishedDate}}
+
+<br/>
+
+{{#link-to 'posts.index' tagName="button" class="button primary medium active"}}Back{{/link-to}}

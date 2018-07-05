@@ -1,9 +1,14 @@
 <h2>Create New Post</h2>
 
 <ul class="post-publish">
+  <!-- ol>{{input value=model.title placeholder="Title"}}</ol -->
+  <!-- ol>{{!textarea value=model.body placeholder="Body"}}</ol -->
+  <!-- ol><button {{action 'publishPost' model}}>Publish</button></ol -->
+
   <ol>{{input value=model.title placeholder="Title"}}</ol>
+  <!-- ol>{{input value=post.username placeholder="Username"}}</ol -->
   <ol>{{textarea value=model.body placeholder="Body"}}</ol>
-  <ol><button {{action 'publishPost' model}}>Publish</button></ol>
+  <ol><button {{action "publishPost" model}}>Publish</button></ol>
 </ul>
 
 <button class="button primary medium red" {{action 'cancel'}}>Cancel</button>
