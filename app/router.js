@@ -28,6 +28,8 @@ Router.map(function() {
     this.route('new');
   });
 
+  this.route('user', { path: '/user/:user_id' });
+
   this.route('users', function() {
     this.route('new');
     this.route('edit', { path: '/:user_id/edit' });

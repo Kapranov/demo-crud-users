@@ -1,4 +1,5 @@
 import EmberObject from '@ember/object';
+import firebase from 'firebase';
 
 export default EmberObject.extend({
   /**
@@ -25,9 +26,13 @@ export default EmberObject.extend({
       }
 
       // a user couldn't be found, so create a new user
+      const transform = firebase.database.ServerValue.TIMESTAMP;
       let user = store.createRecord('user', {
         id: username,
-        created: new Date().getTime()
+        //created: new Date().getTime()
+        created: transform,
+        updatedAt: transform,
+        createdAt: transform
       });
 
       // save the user

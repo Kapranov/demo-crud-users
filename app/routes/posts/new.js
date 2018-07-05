@@ -1,14 +1,8 @@
 import Route from '@ember/routing/route';
 import firebase from 'firebase';
-//import EmberObject from '@ember/object';
 import { hash } from 'rsvp';
 
 export default Route.extend({
-  //init() {
-  //  this._super(...arguments);
-  //  this.set('post', EmberObject.create());
-  //},
-
   model() {
     const store = this.store;
     return store.createRecord('post');
@@ -16,9 +10,8 @@ export default Route.extend({
 
   postIsValid() {
     let isValid = true;
-    //['post.title', 'post.username', 'post.body'].forEach(function(field) {
-    ['title', 'username', 'body'].forEach(function(field) {
-      if (this.get(field) === '') {
+    ['model.title', 'model.username', 'model.body'].forEach(function(field) {
+      if (this.controller.get(field) === '') {
         isValid = false;
       }
     }, this);
@@ -32,28 +25,25 @@ export default Route.extend({
 
       if (!this.postIsValid()) { return; }
       hash({
-        //user: this.get('util').getUserByUsername(this.get('post.username'))
-        user: this.get('util').getUserByUsername('post.username')
-      }).then(function(/*promises*/) {
+        user: this.get('util').getUserByUsername(this.controller.get('model.username'))
+      }).then(function(promises) {
         let newPost = this.store.createRecord('post', {
           title: addPost.title,
           body:  addPost.body,
           published: transform,
-          //user: promises.user
+          user: promises.user
         });
 
-        newPost.save();
-        //newPost.save().then(() => this.transitionTo('posts.index'));
+        newPost.save().then(() => this.transitionTo('posts.index'));
 
-        //this.setProperties({
-        //  'post.title': '',
-        //  'post.username': '',
-        //  'post.body': ''
-        //});
+        this.setProperties({
+          'model.title': '',
+          'model.username': '',
+          'model.body': ''
+        });
 
-        //this.transitionToRoute('post', newPost);
         //this.transitionTo('posts.index');
-        this.transitionTo('post', newPost);
+        //this.transitionTo('post', newPost);
       }.bind(this));
     },
 
@@ -73,13 +63,13 @@ export default Route.extend({
       this.transitionTo('posts.index');
     },
 
-    //willTransition() {
-    //  let model = this.controller.get('model');
+    willTransition() {
+      let model = this.controller.get('model');
 
-    //  if (model.get('isNew')) {
-    //    model.destroyRecord();
-    //  }
-    //}
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+    }
   },
 
   post: undefined
