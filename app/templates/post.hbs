@@ -1,6 +1,10 @@
-{{!fire-post post=model isExpanded=true isSingle=true onPublishComment="publishComment"}}
 Id: {{model.id}} | Title: {{model.title}} | Body: {{model.body}} | Published: {{model.published}} | Released: {{model.publishedDate}}
 
 <hr>
 
 {{#link-to 'posts.index' tagName="button" class="button primary medium active"}}Back{{/link-to}}
+
+<hr>
+
+{{!fire-post post=model isExpanded=true isSingle=true onPublishComment="publishComment"}}
+{{fire-post post=model isExpanded=true}}

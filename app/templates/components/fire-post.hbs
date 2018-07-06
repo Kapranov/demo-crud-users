@@ -1,1 +1,9 @@
-{{yield}}
+<div class="post-header">
+  <img src={{post.user.avatar}} class="avatar post-avatar"/>
+  <div class="post-author">{{post.user.id}}</div>
+  <div class="post-date">{{post.publishedDate}}</div>
+</div>
+<h3 class="post-title">{{post.title}}</h3>
+{{#if isExpanded}}
+  <div class="post-content">{{!markdown post.body}}</div>
+{{/if}}
