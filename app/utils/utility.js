@@ -29,7 +29,6 @@ export default EmberObject.extend({
       const transform = firebase.database.ServerValue.TIMESTAMP;
       let user = store.createRecord('user', {
         id: username,
-        //created: new Date().getTime()
         created: transform,
         updatedAt: transform,
         createdAt: transform

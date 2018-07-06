@@ -13,9 +13,9 @@ export default Model.extend({
   avatarFile: attr('string', { defaultValue: 'donald.png' }),
   spent:      attr('dollars',{ defaultValue: 0 }),
   firstName:  attr('string', { defaultValue: 'Your FirstName' }),
-  created:    attr('number'),
-  updatedAt:  attr('number'),
-  createdAt:  attr('number'),
+  created:    attr('number', { defaultValue: new Date().getTime()}),
+  updatedAt:  attr('number', { defaultValue: new Date().getTime()}),
+  createdAt:  attr('number', { defaultValue: new Date().getTime()}),
 
   username: computed(function() {
     return get(this, 'id');
@@ -34,5 +34,4 @@ export default Model.extend({
   }),
 
   roles: hasMany('role', { async: true })
-  //posts: hasMany('post', { async: true })
 });

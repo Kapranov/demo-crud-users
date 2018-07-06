@@ -752,7 +752,7 @@ export default Ember.Controller.extend({
 [127]: https://www.emberjs.com/api/ember/release/functions/@ember%2Fobject%2Fcomputed/sort
 [128]: https://blog.isnorcreative.com/2016/02/11/ember-custom-sort.html
 [129]: https://emberjs.com/api/ember/release/functions/@ember%2Fobject/computed?anchor=sort&show=inherited,protected,private,deprecated&type=method#
-
+[130]: https://alexdiliberto.com/posts/ember-route-hooks-a-complete-look/
 
 [150]: http://kevin.pfefferle.co/liquid-fire-reveal/
 [151]: https://github.com/kpfefferle/rumbrella

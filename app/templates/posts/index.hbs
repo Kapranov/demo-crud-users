@@ -3,7 +3,7 @@
   {{#each model as |post|}}
   <div>
     <span>{{post.publishedDate}}</span> |
-    <span>{{post.id}}</span> |
+    <span>{{#link-to 'post' post}}{{post.id}}{{/link-to}}</span> |
     <span>{{post.title}}</span> |
     <span>{{post.body}}</span> |
     <span>{{moment-format post.published 'MMM D, YYYY h:mm:ss A'}}</span>

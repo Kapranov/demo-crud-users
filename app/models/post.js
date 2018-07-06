@@ -12,5 +12,5 @@ export default Model.extend({
     return moment(this.get('published')).format('MMMM Do, YYYY');
   }),
   user: belongsTo('user', { async: true }),
-  comments: hasMany('comment', { async: true, inverse: null })
+  comments: hasMany('comment', { async: true })
 });
