@@ -4,7 +4,8 @@
   <ol>{{input value=model.title placeholder="Title"}}</ol>
   <ol>{{input value=model.username placeholder="Username"}}</ol>
   <ol>{{textarea value=model.body placeholder="Body"}}</ol>
-  <ol><button {{action "publishPost" model}}>Publish</button></ol>
+  <ol>
+    <button {{action "publishPost" model}} class="button primary medium">Publish</button>
+    <button class="button primary medium red" {{action 'cancel'}}>Cancel</button>
+  </ol>
 </ul>
-
-<button class="button primary medium red" {{action 'cancel'}}>Cancel</button>
