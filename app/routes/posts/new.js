@@ -10,7 +10,7 @@ export default Route.extend({
 
   postIsValid() {
     let isValid = true;
-    ['model.title', 'model.username', 'model.body'].forEach(function(field) {
+    ['title', 'username', 'body'].forEach(function(field) {
       if (this.controller.get(field) === '') {
         isValid = false;
       }
@@ -19,7 +19,7 @@ export default Route.extend({
   },
 
   actions: {
-    // current version
+    // version #2
     publishPost(addPost) {
       const transform = firebase.database.ServerValue.TIMESTAMP;
 
@@ -39,25 +39,11 @@ export default Route.extend({
         this.setProperties({
           'model.title': '',
           'model.username': '',
+          'model.published:': '',
           'model.body': ''
         });
-
-        //this.transitionTo('posts.index');
-        //this.transitionTo('post', newPost);
       }.bind(this));
     },
-
-    // working version
-    //publishPost(newPost) {
-    //  const transform = firebase.database.ServerValue.TIMESTAMP;
-
-    //  let post = this.store.createRecord('post', {
-    //    title: newPost.title,
-    //    body:  newPost.body,
-    //    published: transform
-    //  });
-    //  post.save().then(() => this.transitionTo('posts.index'));
-    //},
 
     cancel() {
       this.transitionTo('posts.index');
@@ -70,7 +56,5 @@ export default Route.extend({
         model.destroyRecord();
       }
     }
-  },
-
-  post: undefined
+  }
 });

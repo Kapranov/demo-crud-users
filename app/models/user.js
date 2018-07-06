@@ -12,7 +12,7 @@ export default Model.extend({
   bio:        attr('string', { defaultValue: 'Your Biography' }),
   avatarFile: attr('string', { defaultValue: 'donald.png' }),
   spent:      attr('dollars',{ defaultValue: 0 }),
-  firstName:  attr('string'),
+  firstName:  attr('string', { defaultValue: 'Your FirstName' }),
   created:    attr('number'),
   updatedAt:  attr('number'),
   createdAt:  attr('number'),
@@ -33,6 +33,6 @@ export default Model.extend({
     return (get(this, 'name')) + ' ' + (get(this, 'email'));
   }),
 
-  roles: hasMany('role', { async: true }),
-  posts: hasMany('post', { async: true })
+  roles: hasMany('role', { async: true })
+  //posts: hasMany('post', { async: true })
 });
