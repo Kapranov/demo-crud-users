@@ -15,7 +15,7 @@
   <ul class="users-listing">
     {{#each model as |user|}}
       <!-- li>{{user.name}}</li -->
-      <li>{{link-to user.name "users.show" user class=user.id}}</li>
+      <li>{{link-to user.fullName "users.show" user class=user.id}}</li>
     {{else}}
       <li>no users… :-(</li>
     {{/each}}

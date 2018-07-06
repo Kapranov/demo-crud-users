@@ -1,16 +1,13 @@
-<section>
-  {{#link-to 'posts.new' tagName="button" class="button primary medium active"}}Add a New Post{{/link-to}}
-  {{#each model as |post|}}
-  <div>
-    <span>{{post.publishedDate}}</span> |
-    <span>{{#link-to 'post' post}}{{post.id}}{{/link-to}}</span> |
-    <span>{{post.title}}</span> |
-    <span>{{post.body}}</span> |
-    <span>{{moment-format post.published 'MMM D, YYYY h:mm:ss A'}}</span> |
-    <span><button class="btn btn-danger remove" {{action 'deletePost' post}}><span class="fa fa-minus"></span> Remove</button></span>
-  </div>
-  {{/each}}
-</section>
+{{#link-to 'posts.new' tagName="button" class="button primary medium active"}}Add a New Post{{/link-to}}
+  <hr>
+{{#each model as |post|}}
+  <strong>Released:</strong> {{post.publishedDate}}<strong>|</strong>
+  <strong>Id:</strong> {{#link-to 'post' post}}{{post.id}}{{/link-to}} <strong>|</strong>
+  <strong>Title:</strong> {{post.title}} <strong>|</strong>
+  <strong>Body:</strong> {{post.body}} <strong>|</strong>
+  <strong>Published:</strong> {{moment-format post.published 'MMM D, YYYY h:mm:ss A'}} <strong>|</strong>
+  <button class="btn btn-danger remove" {{action 'deletePost' post}}><span class="fa fa-minus"></span> Remove</button>
+{{/each}}
 
 <br/>
 <ul class="posts">

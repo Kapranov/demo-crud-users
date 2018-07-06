@@ -32,6 +32,9 @@ export default Model.extend({
   fullInfo: computed('name', 'email', function(){
     return (get(this, 'name')) + ' ' + (get(this, 'email'));
   }),
+  fullName: computed('name', 'firstName', function(){
+    return (get(this, 'firstName')) + ' ' + (get(this, 'name'));
+  }),
 
   roles: hasMany('role', { async: true })
 });

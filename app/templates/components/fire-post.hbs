@@ -6,4 +6,30 @@
 <h3 class="post-title">{{post.title}}</h3>
 {{#if isExpanded}}
   <div class="post-content">{{!markdown post.body}}</div>
+  <h4 class="post-comments-header">
+    {{#if post.comments}}
+      Comments
+    {{else}}
+      Leave a comment!
+    {{/if}}
+  </h4>
+  <ul class="post-comments">
+    {{#each post.comments as |comment|}}
+      <li class="post-comment">
+        <img src={{comment.user.avatar}} class="avatar post-comment-avatar" />
+        <div class="post-comment-body">
+          <div class="post-comment-meta">
+            <strong class="post-comment-author">{{comment.user.username}}</strong>
+            <em class="post-comment-date">{{comment.publishedDate}}</em>
+          </div>
+          {{!markdown comment.body}}
+        </div>
+      </li>
+    {{/each}}
+    <li class="post-comment post-comment-new">
+      {{input value=commentUsername placeholder="Username"}}
+      {{textarea value=commentBody placeholder="Contribute to the conversation"}}
+      <button {{action "publishComment"}} class="button primary medium">Publish</button>
+    </li>
+  </ul>
 {{/if}}
