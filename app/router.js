@@ -23,12 +23,16 @@ Router.map(function() {
   this.route('report',  { path: '/reports/:report' });
   this.route('list',    { path: '/reports/:report/lists/:list' });
   this.route('page',    { path: '/reports/:report/lists/:list/pages/:page' });
+  this.route('user',    { path: '/user/:user_id' });
   this.route('post',    { path: '/post/:post_id' });
+
   this.route('posts', function() {
     this.route('new');
   });
 
-  this.route('user', { path: '/user/:user_id' });
+  this.route('widgets', function() {
+    this.route('current');
+  });
 
   this.route('users', function() {
     this.route('new');

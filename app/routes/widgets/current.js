@@ -1,9 +1,9 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model(params) {
+  model() {
     const store = this.store;
 
-    return store.findRecord('user', params.user_id);
+    return store.push({ data: null });
   }
 });

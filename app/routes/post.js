@@ -4,6 +4,7 @@ import { Promise } from 'rsvp';
 export default Route.extend({
   model(params) {
     const store = this.store;
+
     return store.findRecord('post', params.post_id);
   },
 
