@@ -1,35 +1,44 @@
-import ApplicationAdapter from './application';
+import DS from 'ember-data';
 import { resolve } from 'rsvp';
 
-export default ApplicationAdapter.extend({
-  findAll() {
+export default DS.JSONAPIAdapter.extend({
+  findAll: function() {
     return resolve({
       data: [{
         id: '1',
-        name: "WIDGET 1"
-      }]
+        type: 'widget',
+        attributes: {
+          name: "WIDGET 1",
+        },
+      }],
     });
   },
 
-  createRecord() {
+  createRecord: function() {
     return resolve({
       data: {
         id: '2',
-        name: "WIDGET 2",
-      }
+        type: 'widget',
+        attributes: {
+          name: "WIDGET 2",
+        },
+      },
     });
   },
 
-  updateRecord(store, typeClass, snapshot) {
+  updateRecord: function(store, typeClass, snapshot) {
     const id = snapshot.id;
 
     return resolve({
       data: {
         id: id,
-        name: `WIDGET ${id} - UPDATED`,
+        type: 'widget',
+        attributes: {
+          name: `WIDGET ${id} - UPDATED`,
+        },
       },
 
       included: [],
     });
-  }
+  },
 });
