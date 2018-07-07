@@ -30,9 +30,7 @@ Router.map(function() {
     this.route('new');
   });
 
-  this.route('widgets', function() {
-    this.route('current');
-  });
+  this.route('widgets');
 
   this.route('users', function() {
     this.route('new');
