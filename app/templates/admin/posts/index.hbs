@@ -13,6 +13,7 @@
         <th>Title</th>
         <th>Message</th>
         <th>Published</th>
+        <th>PublishedDate</th>
         <th><i class="fa fa-trash-o"></i><span> Destroy</span></th>
       </tr>
     </thead>
@@ -23,6 +24,7 @@
         <td>{{post.title}}</td>
         <td>{{post.body}}</td>
         <td>{{moment-format post.published 'MMM D, YYYY h:mm:ss A'}}</td>
+        <td>{{post.publishedDate}}</td>
         <td><button class="btn btn-danger remove" {{action 'deletePost' post}}><span class="fa fa-minus"></span> Remove</button></td>
       </tr>
     {{/each}}

@@ -16,6 +16,7 @@ module.exports = function(defaults) {
   });
 
   app.import('node_modules/ember-droplet/dist/ember-droplet.js');
+  app.import('vendor/markdown/markdown.js');
 
   return app.toTree();
 };

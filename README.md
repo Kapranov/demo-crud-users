@@ -760,3 +760,9 @@ export default Ember.Controller.extend({
 [100]: https://www.emberscreencasts.com/posts/92-promises-basics
 [101]: https://emberigniter.com/render-promise-before-it-resolves/
 [102]: https://balinterdi.com/blog/promises-instead-of-callbacks/
+
+[200]: https://gist.github.com/gyllstromk/5409699
+[201]: https://github.com/evilstreak/markdown-js
+[202]: https://github.com/gcollazo/ember-cli-showdown
+[203]: https://github.com/showdownjs/showdown
+[204]: https://discuss.emberjs.com/t/is-it-possible-to-render-handlebars-in-content-which-is-produced-using-markdown/10237
