@@ -619,7 +619,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-### 30 June 2018 by Oleg G.Kapranov
+### 10 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -761,8 +761,8 @@ export default Ember.Controller.extend({
 [101]: https://emberigniter.com/render-promise-before-it-resolves/
 [102]: https://balinterdi.com/blog/promises-instead-of-callbacks/
 
-[200]: https://gist.github.com/gyllstromk/5409699
-[201]: https://github.com/evilstreak/markdown-js
-[202]: https://github.com/gcollazo/ember-cli-showdown
-[203]: https://github.com/showdownjs/showdown
-[204]: https://discuss.emberjs.com/t/is-it-possible-to-render-handlebars-in-content-which-is-produced-using-markdown/10237
+[200]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
+[201]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[202]: https://github.com/firebase/emberfire/issues/424
+[203]: https://github.com/simplabs/ember-simple-auth/issues/928
+[204]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject

@@ -1,0 +1,12 @@
+<h2 id="title">Demo Render Markdown into HTML</h2>
+
+<div class="well" style="width: 480px">
+  {{textarea value=editableText}}
+</div>
+
+{{markdown-to-html markdown=editableText}}
+
+<hr>
+{{markdown-to-html markdown='#Markdown is cool [link](https://google.com)'}}
+<hr>
+{{markdown-to-html "#Markdown is cool [link](http://emberjs.com)"}}

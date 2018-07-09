@@ -65,6 +65,8 @@ Router.map(function() {
       this.route('new');
     });
   });
+  this.route('markdowns');
+  this.route('auth');
 });
 
 Router.extend({

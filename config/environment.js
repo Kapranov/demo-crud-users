@@ -14,6 +14,7 @@ module.exports = function(environment) {
       storageBucket: 'YOUR-FIREBASE-APP.appspot.com',
       messagingSenderId: "YOUR-MESSAGE-SENDER-ID"
     },
+    torii: { sessionServiceName: 'session' },
     contentSecurityPolicy: {
       // 'default-src': "'none'",
       // 'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
