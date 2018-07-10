@@ -14,9 +14,9 @@ module.exports = function(defaults) {
       includeDropzoneCss: true
     },
     'ember-froala-editor': {
-      languages: ['en','ua'],
-      plugins  : true,
-      themes   : 'royal'
+      languages: ['en','ru','uk'],
+      plugins:   ['align','link','lists','paragraph_format','url'],
+      themes:    'red'
     }
   });
 
