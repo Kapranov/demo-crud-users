@@ -721,16 +721,19 @@ export default Ember.Controller.extend({
 [98]: http://emberjs.jsbin.com/hituxado/1/edit?html,css,js,output
 [99]:
 
-[100]: https://github.com/simplabs/ember-simple-auth
-[101]: https://github.com/firebase/emberfire/blob/master/docs/guide/authentication.md
-[102]: http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
-[103]: https://blog.isnorcreative.com/2016/07/30/ember-firebase.html
-[104]: https://medium.com/ecmastack/send-emails-with-ember-js-amazon-ses-firebase-d0fa360cd2ce
-[105]: https://stackoverflow.com/questions/42640039/firebase-3-authentication-with-emberfire-and-torii
-[106]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
-[107]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
-[108]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2
-[109]:
+[100]: https://www.firebase.com/docs/web/guide/user-auth.html
+[101]: https://www.youtube.com/watch?v=QEd2lEoXpp4&t=649s
+[102]: http://jsfiddle.net/firebase/a221m6pb/embedded/result,js/
+[103]: http://jsfiddle.net/firebase/a221m6pb/?utm_source=website&utm_medium=embed&utm_campaign=a221m6pb
+[101]: https://github.com/simplabs/ember-simple-auth
+[102]: https://github.com/firebase/emberfire/blob/master/docs/guide/authentication.md
+[103]: http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
+[104]: https://blog.isnorcreative.com/2016/07/30/ember-firebase.html
+[105]: https://medium.com/ecmastack/send-emails-with-ember-js-amazon-ses-firebase-d0fa360cd2ce
+[106]: https://stackoverflow.com/questions/42640039/firebase-3-authentication-with-emberfire-and-torii
+[107]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[108]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
+[109]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2
 
 [110]: https://medium.com/@eve.essex/implementing-direct-aws-file-uploads-in-ember-js-with-rails-backend-518139bc89c2
 [111]: https://github.com/ga-wdi-boston/capstone-project/issues/287

@@ -4,14 +4,19 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    babel: {
+    'babel': {
       optional: ['es6.spec.symbols']
     },
     'ember-cli-babel': {
       includePolyfill: true
     },
-    emberCliDropzonejs: {
+    'emberCliDropzonejs': {
       includeDropzoneCss: true
+    },
+    'ember-froala-editor': {
+      languages: ['en','ua'],
+      plugins  : true,
+      themes   : 'royal'
     }
   });
 
