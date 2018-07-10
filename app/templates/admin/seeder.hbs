@@ -1,9 +1,10 @@
 <h1>Seeder, our Data Center</h1>
 
 <div class="row">
-  <div class="col-md-4">{{number-box title="Libraries" number=libraries.length}}</div>
-  <div class="col-md-4">{{number-box title="Authors" number=authors.length}}</div>
-  <div class="col-md-4">{{number-box title="Books" number=books.length}}</div>
+  <div class="col-md-3">{{number-box title="Libraries" number=libraries.length}}</div>
+  <div class="col-md-3">{{number-box title="Authors" number=authors.length}}</div>
+  <div class="col-md-3">{{number-box title="Books" number=books.length}}</div>
+  <div class="col-md-3">{{number-box title="Editors" number=editors.length}}</div>
 </div>
 
 {{seeder-block
@@ -24,6 +25,16 @@
   deleteReady=authDelDone
   generateInProgress=generateBooksInProgress
   deleteInProgress=deleteBooksInProgress
+}}
+
+{{seeder-block
+  sectionTitle='Editors'
+  generateAction=(action 'generateEditors')
+  deleteAction=(action 'deleteEditors')
+  generateReady=editorDone
+  deleteReady=editorDelDone
+  generateInProgress=generateEditorsInProgress
+  deleteInProgress=deleteEditorsInProgress
 }}
 
 <div class="well-short">

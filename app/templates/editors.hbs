@@ -1,0 +1,34 @@
+<h2>Ember component for Froala WYSIWYG HTML Rich Text Editor</h2>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        WYSIWYG Editor - Please edit it.
+        <br><small class="small not-bold">(Click on synopsis for editing)</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |editor|}}
+      <tr>
+        <td>{{{editor.synopsis}}}</td>
+        <td>
+          {{#if editor.isEditing}}
+            <form {{action 'saveFroala' editor on='submit'}} class="form-inline">
+              <div class="input-group">
+                {{tinymce-editor value=editor.synopsis onValueChanged=(action (mut editor.synopsis))}}
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-success" disabled={{editor.isNotValid}}>Save</button>
+                  <button class="btn btn-danger" {{action 'cancelFroalaEdit' editor}}>Cancel</button>
+                </div>
+              </div>
+            </form>
+          {{else}}
+            <span {{action 'editFroala' editor}}>{{editor.synopsis}}</span>
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

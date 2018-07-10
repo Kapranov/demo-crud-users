@@ -1,0 +1,5 @@
+{{#each editors as |editor|}}
+  <option value={{editor.id}} selected={{is-equal editor.id default.id}}>
+    {{editor.synopsis}}
+  </option>
+{{/each}}

@@ -12,11 +12,6 @@ module.exports = function(defaults) {
     },
     'emberCliDropzonejs': {
       includeDropzoneCss: true
-    },
-    'ember-froala-editor': {
-      languages: ['en','ru','uk'],
-      plugins:   ['align','link','lists','paragraph_format','url'],
-      themes:    'red'
     }
   });
 

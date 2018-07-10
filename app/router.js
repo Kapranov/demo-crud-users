@@ -10,13 +10,17 @@ Router.map(function() {
   this.route('about');
   this.route('attachments');
   this.route('avatar');
+  this.route('auth');
   this.route('authors');
+  this.route('editors');
   this.route('books');
   this.route('contact');
   this.route('invitations');
+  this.route('markdowns');
   this.route('signatures');
   this.route('render_nested');
   this.route('uploads');
+
   this.route('index',   { path: '/' });
   this.route('missing', { path: '/*path' });
   this.route('reports', { path: '/reports' });
@@ -65,8 +69,6 @@ Router.map(function() {
       this.route('new');
     });
   });
-  this.route('markdowns');
-  this.route('auth');
 });
 
 Router.extend({

@@ -14,15 +14,23 @@
       <ul class="nav navbar-nav">
         {{#nav-link-to 'invitations'}}Invite{{/nav-link-to}}
         {{#nav-link-to 'users'}}Users{{/nav-link-to}}
-        {{#nav-link-to 'libraries'}}Libraries{{/nav-link-to}}
-        {{#nav-link-to 'authors'}}Authors{{/nav-link-to}}
-        {{#nav-link-to 'books'}}Books{{/nav-link-to}}
-        {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
-        {{#nav-link-to 'render_nested'}}Nested{{/nav-link-to}}
-        {{#nav-link-to 'posts'}}Posts{{/nav-link-to}}
-        {{#nav-link-to 'widgets'}}Widget{{/nav-link-to}}
-        {{#nav-link-to 'avatar'}}Avatar{{/nav-link-to}}
-        {{#nav-link-to 'auth'}}Authorization{{/nav-link-to}}
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Collections<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {{#nav-link-to 'libraries'}}Libraries{{/nav-link-to}}
+            {{#nav-link-to 'authors'}}Authors{{/nav-link-to}}
+            {{#nav-link-to 'books'}}Books{{/nav-link-to}}
+            {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
+            {{#nav-link-to 'render_nested'}}Nested{{/nav-link-to}}
+            {{#nav-link-to 'posts'}}Posts{{/nav-link-to}}
+            {{#nav-link-to 'widgets'}}Widget{{/nav-link-to}}
+            {{#nav-link-to 'avatar'}}Avatar{{/nav-link-to}}
+          </ul>
+        </li>
+        {{#nav-link-to 'editors'}}Editor{{/nav-link-to}}
+        {{#nav-link-to 'auth'}}Logins{{/nav-link-to}}
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

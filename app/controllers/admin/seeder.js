@@ -5,6 +5,23 @@ import Faker from "faker";
 
 export default Controller.extend({
   actions: {
+    generateEditors(volume) {
+      this.set('generateEditorsInProgress', true);
+
+      const counter = parseInt(volume);
+      let savedEditors = [];
+
+      for (let i = 0; i < counter; i++) {
+        savedEditors.push(this._saveRandomEditor());
+      }
+
+      all(savedEditors)
+        .then(() => {
+          this.set('generateEditorsInProgress', false);
+          this.set('editorDone', true)
+        });
+
+    },
     generateLibraries(volume) {
       this.set('generateLibrariesInProgress', true);
 
@@ -19,6 +36,15 @@ export default Controller.extend({
         .then(() => {
           this.set('generateLibrariesInProgress', false);
           this.set('libDone', true)
+        });
+    },
+
+    deleteEditors() {
+      this.set('deleteEditorsInProgress', true);
+      this._destroyAll(get(this, 'editors'))
+        .then(() => {
+          this.set('editorDelDone', true);
+          this.set('deleteEditorsInProgress', false);
         });
     },
 
@@ -72,6 +98,10 @@ export default Controller.extend({
 
   _saveRandomAuthor() {
     return this.store.createRecord('author').randomize().save();
+  },
+
+  _saveRandomEditor() {
+    return this.store.createRecord('editor').randomize().save();
   },
 
   _generateSomeBooks(author) {
