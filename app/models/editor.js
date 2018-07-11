@@ -11,6 +11,7 @@ export default Model.extend({
 
   randomize() {
     this.set('synopsis', Faker.lorem.sentence());
+    this.set('synopsis', '<h3>' + Faker.lorem.sentence() + '</h3>');
 
     return this;
   },
