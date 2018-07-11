@@ -619,7 +619,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-### 10 July 2018 by Oleg G.Kapranov
+### 11 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -736,53 +736,66 @@ export default Ember.Controller.extend({
 [112]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-2
 [113]: https://rawgit.com/Marak/faker.js/master/examples/browser/index.html
 
-http://www.webhook.com/blog/how-we-use-firebases-simple-login-with-ember-to-manage-authentication/
-https://github.com/webhook/webhook-cms
-https://github.com/firebase/emberfire/issues/503
-https://github.com/firebase/firebase-arduino/issues/224
-https://stackoverflow.com/questions/39159703/ember-js-and-firebase-unable-to-sign-up-user
-http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
-https://github.com/jamesdixon/ember-cli-simple-auth-firebase
-http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
-https://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
-https://github.com/firebase/emberfire/blob/master/tests/dummy/app/templates/auth.hbs
-https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
-https://github.com/danielgynn/flint-bookstore
-https://github.com/zachgarwood/ember-firebase-demo
-http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
-https://github.com/firebase/firebase-token-generator-node
+[114]: https://firebase.google.com/docs/auth/web/password-auth
+[115]: https://www.firebase.com/docs/security/guide/user-security.html
+[116]: https://firebase.google.com/docs/auth/admin/verify-id-tokens
+[117]: https://www.firebase.com/docs/security/guide/user-security.html
+[118]: https://www.firebase.com/docs/web/guide/login/custom.html
+[119]: https://github.com/firebase/quickstart-js
 
-[129]: https://medium.com/@eve.essex/implementing-direct-aws-file-uploads-in-ember-js-with-rails-backend-518139bc89c2
-[130]: https://github.com/ga-wdi-boston/capstone-project/issues/287
-[131]: https://github.com/awslabs/aws-mobilehub-ember
-[132]: https://aws.amazon.com/blogs/mobile/deploying-an-emberjs-mobile-web-application-mobile-hub/
-[133]: https://aws.amazon.com/blogs/developer/creating-and-deploying-a-serverless-web-application-with-cloudformation-and-ember-js/
-[134]: https://puppet.com/docs/pipelines-for-apps/free/application-emberjs.html
-[135]: https://stackoverflow.com/questions/38088565/add-a-favicon-to-aws-s3-ember-js
-[136]: http://mockra.com/2016/02/13/ember-s3-file-upload
-[137]: https://www.youtube.com/watch?v=5MxJl4ZA0Us
-[138]: https://emberigniter.com/deploy-ember-cli-app-amazon-s3-linux-ssh-rsync
-[139]: https://www.emberscreencasts.com/posts/48-upload-a-file-as-part-of-a-form
-[140]: https://smashingboxes.com/blog/image-upload-in-phoenix/
-[141]: https://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/
-[142]: https://medium.com/developers-writing/writing-an-ember-backend-in-phoenix-f39f12725377
-[143]: https://kevink.me/2015/10/23/creating-a-sortable-table-component-in-ember-js/
-[144]: https://github.com/kevinkucharczyk/ember-dynamic-table
-[145]: https://www.theguild.nl/sorting-displayed-data-in-ember-js/
-[146]: https://www.emberjs.com/api/ember/release/functions/@ember%2Fobject%2Fcomputed/sort
-[147]: https://blog.isnorcreative.com/2016/02/11/ember-custom-sort.html
-[148]: https://emberjs.com/api/ember/release/functions/@ember%2Fobject/computed?anchor=sort&show=inherited,protected,private,deprecated&type=method#
-[149]: https://alexdiliberto.com/posts/ember-route-hooks-a-complete-look/
+[120]: http://www.webhook.com/blog/how-we-use-firebases-simple-login-with-ember-to-manage-authentication/
+[121]: https://github.com/webhook/webhook-cms
+[122]: https://github.com/firebase/emberfire/issues/503
+[123]: https://github.com/firebase/firebase-arduino/issues/224
+[124]: https://stackoverflow.com/questions/39159703/ember-js-and-firebase-unable-to-sign-up-user
+[125]: http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
+[126]: https://github.com/jamesdixon/ember-cli-simple-auth-firebase
+[127]: http://vikram-s-narayan.github.io/blog/authentication-with-ember-and-firebase-part-1/
 
-[150]: http://kevin.pfefferle.co/liquid-fire-reveal/
-[151]: https://github.com/kpfefferle/rumbrella
-[152]: https://github.com/kpfefferle/rumbl
-[100]: https://www.emberscreencasts.com/posts/92-promises-basics
-[101]: https://emberigniter.com/render-promise-before-it-resolves/
-[102]: https://balinterdi.com/blog/promises-instead-of-callbacks/
+[128]: https://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
+[129]: https://www.programwitherik.com/ember-cli-with-firebase-simple-login/
+[130]: https://www.programwitherik.com/blog-tutorial-with-ember-js/
+[131]: https://github.com/ErikCH/Ember-Cli-Blog-Tutorial-Firebase
+[132]: https://github.com/ErikCH/Ember-Firebase-Simple-Login-Example
+[133]: https://github.com/ErikCH/FireBaseBlogExample
+[134]: https://github.com/firebase/emberfire/blob/master/tests/dummy/app/templates/auth.hbs
+[135]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[136]: https://github.com/danielgynn/flint-bookstore
+[137]: https://github.com/zachgarwood/ember-firebase-demo
+[138]: http://zachgarwood.com/2016/01/25/user-authentication-made-easy-with-firebase/
+[139]: https://github.com/firebase/firebase-token-generator-node
 
-[200]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
-[201]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
-[202]: https://github.com/firebase/emberfire/issues/424
-[203]: https://github.com/simplabs/ember-simple-auth/issues/928
-[204]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject
+[140]: https://medium.com/@eve.essex/implementing-direct-aws-file-uploads-in-ember-js-with-rails-backend-518139bc89c2
+[141]: https://github.com/ga-wdi-boston/capstone-project/issues/287
+[142]: https://github.com/awslabs/aws-mobilehub-ember
+[143]: https://aws.amazon.com/blogs/mobile/deploying-an-emberjs-mobile-web-application-mobile-hub/
+[144]: https://aws.amazon.com/blogs/developer/creating-and-deploying-a-serverless-web-application-with-cloudformation-and-ember-js/
+[145]: https://puppet.com/docs/pipelines-for-apps/free/application-emberjs.html
+[146]: https://stackoverflow.com/questions/38088565/add-a-favicon-to-aws-s3-ember-js
+[147]: http://mockra.com/2016/02/13/ember-s3-file-upload
+[148]: https://www.youtube.com/watch?v=5MxJl4ZA0Us
+[149]: https://emberigniter.com/deploy-ember-cli-app-amazon-s3-linux-ssh-rsync
+[150]: https://www.emberscreencasts.com/posts/48-upload-a-file-as-part-of-a-form
+[151]: https://smashingboxes.com/blog/image-upload-in-phoenix/
+[152]: https://haughtcodeworks.com/blog/software-development/s3-direct-uploads-with-ember-and-phoenix/
+[153]: https://medium.com/developers-writing/writing-an-ember-backend-in-phoenix-f39f12725377
+[154]: https://kevink.me/2015/10/23/creating-a-sortable-table-component-in-ember-js/
+[155]: https://github.com/kevinkucharczyk/ember-dynamic-table
+[156]: https://www.theguild.nl/sorting-displayed-data-in-ember-js/
+[157]: https://www.emberjs.com/api/ember/release/functions/@ember%2Fobject%2Fcomputed/sort
+[158]: https://blog.isnorcreative.com/2016/02/11/ember-custom-sort.html
+[159]: https://emberjs.com/api/ember/release/functions/@ember%2Fobject/computed?anchor=sort&show=inherited,protected,private,deprecated&type=method#
+[160]: https://alexdiliberto.com/posts/ember-route-hooks-a-complete-look/
+
+[161]: http://kevin.pfefferle.co/liquid-fire-reveal/
+[162]: https://github.com/kpfefferle/rumbrella
+[163]: https://github.com/kpfefferle/rumbl
+[164]: https://www.emberscreencasts.com/posts/92-promises-basics
+[165]: https://emberigniter.com/render-promise-before-it-resolves/
+[166]: https://balinterdi.com/blog/promises-instead-of-callbacks/
+
+[190]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
+[191]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[192]: https://github.com/firebase/emberfire/issues/424
+[193]: https://github.com/simplabs/ember-simple-auth/issues/928
+[194]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject

@@ -2,12 +2,15 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   beforeModel() {
+    //return this.get('session').fetch().catch((error) => { console.log(error); });
     //return this.get('session').fetch().catch(() => undefined);
-    //return this.get("session").fetch().catch(function() {});
-    //return this.get('session').fetch().catch(function() {});
-    return this.get('session').fetch().catch((error) => {
-      console.log(error);
-    });
+    return this.get("session").fetch().catch(function() {});
+  },
+
+  model(){
+    const store = this.store;
+
+    return store.findAll('user');
   },
 
   actions: {
