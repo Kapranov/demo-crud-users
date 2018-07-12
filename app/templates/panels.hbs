@@ -1,0 +1,123 @@
+<h1>Collapsible Panel - examples</h1>
+
+<h4>Basic usage</h4>
+
+{{#cp-panel as |p|}}
+  {{#p.toggle}}
+    <p>Click me!</p>
+  {{/p.toggle}}
+
+  {{#p.body}}
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus neque magnam, hic quis beatae repellendus harum modi pariatur minus quidem alias! Eius incidunt impedit eaque, est, illo officiis expedita molestiae.</p>
+    </div>
+  {{/p.body}}
+{{/cp-panel}}
+
+<h4>Start out open</h4>
+
+{{#cp-panel open=true as |p|}}
+  {{#p.toggle}}
+    <p>Click me!</p>
+  {{/p.toggle}}
+  {{#p.body}}
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus neque magnam, hic quis beatae repellendus harum modi pariatur minus quidem alias! Eius incidunt impedit eaque, est, illo officiis expedita molestiae.</p>
+    </div>
+  {{/p.body}}
+{{/cp-panel}}
+
+<h4>Accordion</h4>
+
+{{#cp-panels accordion=true as |panels|}}
+  {{#panels.panel as |panel|}}
+    {{#panel.toggle}}
+      <p>Panel A</p>
+    {{/panel.toggle}}
+    {{#panel.body}}
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus neque magnam, hic quis beatae repellendus harum modi pariatur minus quidem alias! Eius incidunt impedit eaque, est, illo officiis expedita molestiae.</p>
+      </div>
+    {{/panel.body}}
+  {{/panels.panel}}
+
+  {{#panels.panel as |panel|}}
+    {{#panel.toggle}}
+      <p>Panel B</p>
+    {{/panel.toggle}}
+    {{#panel.body}}
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus neque magnam, hic quis beatae repellendus harum modi pariatur minus quidem alias! Eius incidunt impedit eaque, est, illo officiis expedita molestiae.</p>
+      </div>
+    {{/panel.body}}
+  {{/panels.panel}}
+{{/cp-panels}}
+
+<h4>Nested panels</h4>
+
+{{#cp-panel as |p|}}
+  {{#p.toggle}}
+    <p>Parent</p>
+  {{/p.toggle}}
+  {{#p.body}}
+    {{#cp-panels class='u-margin-bottom' accordion=true as |panels|}}
+      {{#panels.panel as |p|}}
+        {{#p.toggle}}
+          <p>Child 1</p>
+        {{/p.toggle}}
+        {{#p.body}}
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate veniam facere consectetur, aperiam nostrum, praesentium nisi. Quae fuga, maiores, hic atque velit, omnis explicabo dolore a quaerat, harum perferendis voluptate.</p>
+        {{/p.body}}
+      {{/panels.panel}}
+
+      {{#panels.panel as |p|}}
+        {{#p.toggle}}
+          <p>Child 2</p>
+        {{/p.toggle}}
+        {{#p.body}}
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate veniam facere consectetur, aperiam nostrum, praesentium nisi. Quae fuga, maiores, hic atque velit, omnis explicabo dolore a quaerat, harum perferendis voluptate.</p>
+        {{/p.body}}
+      {{/panels.panel}}
+    {{/cp-panels}}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat error enim, quae pariatur atque possimus aliquam, beatae saepe veritatis natus alias nostrum! Atque aliquid, fugit esse dolor ducimus. Ab, labore.</p>
+
+  {{/p.body}}
+{{/cp-panel}}
+
+<h4>Programmatic control</h4>
+
+<div class="u-margin-bottom">
+  <button class='btn btn-default' {{action 'expandAll'}}>Expand All</button>
+  <button class='btn btn-default' {{action 'collapseAll'}}>Collapse All</button>
+  <button class='btn btn-default' {{action 'togglePanelA'}}>Toggle Panel A</button>
+  <button class='btn btn-default' {{action 'togglePanelB'}}>Toggle Panel B</button>
+</div>
+
+{{#cp-panels name='group1' as |panels|}}
+  {{#panels.panel name='panelA' as |p|}}
+    {{#p.toggle}}
+      <p>Panel A</p>
+    {{/p.toggle}}
+    {{#p.body}}
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+      </div>
+    {{/p.body}}
+  {{/panels.panel}}
+
+  {{#panels.panel name='panelB' as |p|}}
+    {{#p.toggle}}
+      <p>Panel B</p>
+    {{/p.toggle}}
+    {{#p.body}}
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellendus nisi asperiores esse aperiam aliquid nulla ad dolor autem neque, nihil inventore temporibus delectus earum facere corporis, quam ipsum maxime.</p>
+      </div>
+    {{/p.body}}
+  {{/panels.panel}}
+{{/cp-panels}}

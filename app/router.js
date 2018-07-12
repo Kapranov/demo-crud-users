@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('books');
   this.route('contact');
   this.route('invitations');
+  this.route('panels');
   this.route('markdowns');
   this.route('signatures');
   this.route('render_nested');

@@ -796,8 +796,38 @@ export default Ember.Controller.extend({
 [167]: https://emberigniter.com/render-promise-before-it-resolves/
 [168]: https://balinterdi.com/blog/promises-instead-of-callbacks/
 
-[190]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
-[191]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
-[192]: https://github.com/firebase/emberfire/issues/424
-[193]: https://github.com/simplabs/ember-simple-auth/issues/928
-[194]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject
+[169]: https://github.com/mharris717/ember-drag-drop
+[170]: http://mharris717.github.io/ember-drag-drop/
+[171]: http://schne324.github.io/dragon-drop/demo/
+[172]: https://emberway.io/ember-js-and-html5-drag-and-drop-fa5dfe478a9a
+[173]: https://gist.github.com/timmyomahony/b10980daf90397d82def9881e9e33962
+[174]: https://timmyomahony.com/blog/making-draggable-ember-component/
+[175]: https://www.safaribooksonline.com/library/view/emberjs-cookbook/9781783982202/ch09s06.html
+[176]: https://github.com/Vestorly/ember-dragon-drop
+[177]: https://www.emberscreencasts.com/posts/51-drag-and-drop-with-file-uploads
+[178]: https://www.20papercups.net/programming/drag-n-drop-sorting-with-ember-2-x-and-jquery-ui/
+[179]: https://github.com/Vestorly/torii
+[180]: https://github.com/MattMSumner/torii-fire
+[181]: https://github.com/srvance/ember-oauth-workshop
+[182]: https://github.com/Vishwas-93/Trivia-App
+[183]: https://github.com/milesjmccloskey/Taskyak
+[184]: https://taskyak.herokuapp.com/
+[185]: https://github.com/keanedawg/ember-authentication-tutorial
+[186]: https://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
+[187]: https://github.com/ferborva/ember-full-skeleton
+[188]: https://github.com/mlpassos/ember-auth-demo
+[189]: https://github.com/jpadilla/ember-simple-auth-token
+[190]: https://github.com/purecloudlabs/ember-data-visualizations
+[191]: https://github.com/cibernox/ember-power-select
+[192]: https://github.com/yapplabs/ember-radio-button
+[193]: https://github.com/shipshapecode/ember-shepherd
+[194]: https://github.com/tedconf/ember-collapsible-panel
+[195]:
+[200]: https://medium.com/weareevermore/simple-page-objects-for-testing-ember-js-apps-3f65983d959f
+
+
+[300]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
+[301]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[302]: https://github.com/firebase/emberfire/issues/424
+[304]: https://github.com/simplabs/ember-simple-auth/issues/928
+[305]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject
