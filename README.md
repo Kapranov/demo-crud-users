@@ -824,7 +824,9 @@ export default Ember.Controller.extend({
 [194]: https://github.com/tedconf/ember-collapsible-panel
 [195]:
 [200]: https://medium.com/weareevermore/simple-page-objects-for-testing-ember-js-apps-3f65983d959f
-
+[201]: https://medium.com/@isaacezer/app-like-scrolling-and-transitions-with-ember-js-and-liquid-fire-bce2ad9a13ac
+[202]: https://github.com/ef4/memory-scroll
+[203]: https://github.com/ef4/ember-elsewhere
 
 [300]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
 [301]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/

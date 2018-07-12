@@ -12,7 +12,13 @@ module.exports = function(defaults) {
     },
     'emberCliDropzonejs': {
       includeDropzoneCss: true
-    }
+    },
+
+    //'ember-prism': {
+    //  'theme': 'twilight',
+    //  'components': ['scss', 'markup'],
+    //  'plugins': ['line-highlight']
+    //}
   });
 
   app.import('node_modules/ember-droplet/dist/ember-droplet.js');

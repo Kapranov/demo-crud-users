@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     'no-console':  process.env.NODE_ENV === 'development' ? 2 : 0,
     'no-debugger': process.env.NODE_ENV === 'development' ? 2 : 0,
+    'ember/avoid-leaking-state-in-ember-objects': 'off',
     //"no-alert": "off",
     //"no-array-constructor": "off",
     //"no-bitwise": "off",

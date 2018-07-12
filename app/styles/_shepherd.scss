@@ -1,0 +1,213 @@
+@import "prism-ghcolors";
+@import "fonts";
+
+$background1: #3d2f53;
+$background2: #624b86;
+$button-dark: #75beaa;
+$color-inherit: inherit;
+$light-color: #c1b5d3;
+$altlight-color: #7b7486;
+$panel-border: #d8d8d8;
+$transparent: transparent;
+$whiteish: #c8c7d5;
+
+
+body,
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $whiteish;
+  font-family: $f-primary;
+}
+
+body {
+  //background-color: $background1;
+  font-family: $f-primary;
+  margin: 0;
+}
+
+a {
+  &.bottomButton {
+    background-color: $transparent;
+    border: 2px solid $light-color;
+    color: $light-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.3em;
+    padding: 1.25em 1.25em 1em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+
+    &:hover {
+      border: 2px solid $whiteish;
+      color: $whiteish;
+    }
+  }
+}
+
+.panel {
+  background-color: $whiteish;
+  border-color: $panel-border;
+  border-style: solid;
+  border-width: 1px;
+  color: $background1;
+  font-size: 0.75em;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+}
+
+.button.dark {
+  background: $light-color;
+  color: $button-dark;
+}
+
+@media (max-width: 568px) {
+  .button {
+    display: block;
+    margin: 1em auto 0;
+  }
+}
+
+.shepherd-element {
+  &.shepherd-theme-arrows {
+    &.shepherd-has-title {
+      header {
+        background-color: $whiteish;
+        color: $background1;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: $background1;
+        }
+      }
+    }
+
+    &[x-placement^="bottom"] {
+      .popper__arrow {
+        border-bottom-color: $background1;
+      }
+
+      &.shepherd-has-title .popper__arrow {
+        border-bottom-color: $whiteish;
+      }
+    }
+
+    &[x-placement^="top"] {
+      .popper__arrow {
+        border-top-color: $background1;
+      }
+
+      &.shepherd-has-title .popper__arrow {
+        border-top-color: $whiteish;
+      }
+    }
+
+    .shepherd-content {
+      background-color: $background1;
+
+      .shepherd-text {
+        color: $whiteish;
+
+        a {
+          color: $altlight-color;
+        }
+      }
+    }
+  }
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content {
+  max-width: 100%;
+  width: 400px;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content a {
+  color: $color-inherit;
+}
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content footer .shepherd-buttons li .shepherd-button {
+  background: $background2;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  padding-top: 1em;
+
+  &.shepherd-button-secondary {
+    background-color: $whiteish;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+pre {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  line-height: 1.4em;
+  width: 100%;
+}
+
+.pageTitle {
+  color: $light-color;
+  font-size: 50pt;
+
+  .ember-title {
+    font-family: $f-pacifico;
+  }
+}
+
+@media only screen and (min-width: 40.0625em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.3125rem;
+  }
+
+  h3 {
+    font-size: 1.6875rem;
+  }
+
+  h4 {
+    font-size: 1.4375rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+}
