@@ -822,14 +822,22 @@ export default Ember.Controller.extend({
 [192]: https://github.com/yapplabs/ember-radio-button
 [193]: https://github.com/shipshapecode/ember-shepherd
 [194]: https://github.com/tedconf/ember-collapsible-panel
-[195]:
-[200]: https://medium.com/weareevermore/simple-page-objects-for-testing-ember-js-apps-3f65983d959f
-[201]: https://medium.com/@isaacezer/app-like-scrolling-and-transitions-with-ember-js-and-liquid-fire-bce2ad9a13ac
-[202]: https://github.com/ef4/memory-scroll
-[203]: https://github.com/ef4/ember-elsewhere
+[195]: https://github.com/miguelcobain/ember-paper
+[196]: https://github.com/onechiporenko/ember-paper-modals-manager
+[197]: https://github.com/onechiporenko/ember-bootstrap-modals-manager
+[198]: https://github.com/onechiporenko/ember-models-table
+[199]: https://github.com/offirgolan/ember-cp-validations
+[200]: https://github.com/danmcclain/ember-deferred-content
+[201]: https://github.com/intercom/ember-href-to
+[202]: https://github.com/peec/ember-transition-helper
 
-[300]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
-[301]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
-[302]: https://github.com/firebase/emberfire/issues/424
-[304]: https://github.com/simplabs/ember-simple-auth/issues/928
-[305]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject
+[300]: https://medium.com/weareevermore/simple-page-objects-for-testing-ember-js-apps-3f65983d959f
+[301]: https://medium.com/@isaacezer/app-like-scrolling-and-transitions-with-ember-js-and-liquid-fire-bce2ad9a13ac
+[302]: https://github.com/ef4/memory-scroll
+[303]: https://github.com/ef4/ember-elsewhere
+
+[400]: https://gist.github.com/steven-ferguson/8eddf63123fa74066e9d92f7e829d8e9
+[401]: https://www.danielgynn.com/third-party-auth-in-ember-with-firebase/
+[402]: https://github.com/firebase/emberfire/issues/424
+[404]: https://github.com/simplabs/ember-simple-auth/issues/928
+[405]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject

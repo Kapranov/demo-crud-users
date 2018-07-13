@@ -7,18 +7,26 @@ module.exports = function(defaults) {
     'babel': {
       optional: ['es6.spec.symbols']
     },
+
     'ember-cli-babel': {
       includePolyfill: true
     },
+
     'emberCliDropzonejs': {
       includeDropzoneCss: true
     },
 
-    //'ember-prism': {
-    //  'theme': 'twilight',
-    //  'components': ['scss', 'markup'],
-    //  'plugins': ['line-highlight']
-    //}
+    'ember-prism': {
+      'theme': 'twilight',
+      'components': ['scss', 'markup'],
+      'plugins': ['line-highlight']
+    },
+
+    'ember-bootstrap': {
+      'bootstrapVersion': 3,
+      'importBootstrapFont': false,
+      'importBootstrapCSS': false
+    }
   });
 
   app.import('node_modules/ember-droplet/dist/ember-droplet.js');

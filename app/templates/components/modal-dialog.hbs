@@ -1,9 +1,9 @@
 {{#if enabled}}
-  <div {{action 'toggleModal'}} class="modal modal-show">
-    <button class="modal-close" {{action "hideModal"}}>&times;</button>
-    <div class="modal-body">
+  <div {{action 'toggleModal'}} class="custom-modal custom-modal-show">
+    <button class="custom-modal-close" {{action "hideModal"}}>&times;</button>
+    <div class="custom-modal-body">
       {{yield}}
     </div>
   </div>
-  <div class="modal-backdrop" {{action "hideModal"}}></div>
+  <div class="custom-modal-backdrop" {{action "hideModal"}}></div>
 {{/if}}

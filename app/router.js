@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('invitations');
   this.route('panels');
   this.route('markdowns');
+  this.route('demo-modals');
   this.route('signatures');
   this.route('shepherds');
   this.route('render_nested');
