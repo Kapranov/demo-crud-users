@@ -5,6 +5,7 @@
   <div class="col-md-3">{{number-box title="Authors" number=authors.length}}</div>
   <div class="col-md-3">{{number-box title="Books" number=books.length}}</div>
   <div class="col-md-3">{{number-box title="Editors" number=editors.length}}</div>
+  <div class="col-md-3">{{number-box title="Patients" number=patients.length}}</div>
 </div>
 
 {{seeder-block
@@ -35,6 +36,16 @@
   deleteReady=editorDelDone
   generateInProgress=generateEditorsInProgress
   deleteInProgress=deleteEditorsInProgress
+}}
+
+{{seeder-block
+  sectionTitle='Patients'
+  generateAction=(action 'generatePatients')
+  deleteAction=(action 'deletePatients')
+  generateReady=patientDone
+  deleteReady=patientDelDone
+  generateInProgress=generatePatientsInProgress
+  deleteInProgress=deletePatientsInProgress
 }}
 
 <div class="well-short">

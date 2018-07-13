@@ -5,6 +5,23 @@ import Faker from "faker";
 
 export default Controller.extend({
   actions: {
+    generatePatients(volume) {
+      this.set('generatePatientsInProgress', true);
+
+      const counter = parseInt(volume);
+      let savedPatients = [];
+
+      for (let i = 0; i < counter; i++) {
+        savedPatients.push(this._saveRandomPatient());
+      }
+
+      all(savedPatients)
+        .then(() => {
+          this.set('generatePatientsInProgress', false);
+          this.set('patientDone', true)
+        });
+    },
+
     generateEditors(volume) {
       this.set('generateEditorsInProgress', true);
 
@@ -22,6 +39,7 @@ export default Controller.extend({
         });
 
     },
+
     generateLibraries(volume) {
       this.set('generateLibrariesInProgress', true);
 
@@ -36,24 +54,6 @@ export default Controller.extend({
         .then(() => {
           this.set('generateLibrariesInProgress', false);
           this.set('libDone', true)
-        });
-    },
-
-    deleteEditors() {
-      this.set('deleteEditorsInProgress', true);
-      this._destroyAll(get(this, 'editors'))
-        .then(() => {
-          this.set('editorDelDone', true);
-          this.set('deleteEditorsInProgress', false);
-        });
-    },
-
-    deleteLibraries() {
-      this.set('deleteLibrariesInProgress', true);
-      this._destroyAll(get(this, 'libraries'))
-        .then(() => {
-          this.set('libDelDone', true);
-          this.set('deleteLibrariesInProgress', false);
         });
     },
 
@@ -75,6 +75,34 @@ export default Controller.extend({
         });
     },
 
+
+    deletePatients() {
+      this.set('deletePatientsInProgress', true);
+      this._destroyAll(get(this, 'patients'))
+        .then(() => {
+          this.set('patientDelDone', true);
+          this.set('deletePatientsInProgress', false);
+        });
+    },
+
+    deleteEditors() {
+      this.set('deleteEditorsInProgress', true);
+      this._destroyAll(get(this, 'editors'))
+        .then(() => {
+          this.set('editorDelDone', true);
+          this.set('deleteEditorsInProgress', false);
+        });
+    },
+
+    deleteLibraries() {
+      this.set('deleteLibrariesInProgress', true);
+      this._destroyAll(get(this, 'libraries'))
+        .then(() => {
+          this.set('libDelDone', true);
+          this.set('deleteLibrariesInProgress', false);
+        });
+    },
+
     deleteBooksAndAuthors() {
       this.set('deleteBooksInProgress', true);
 
@@ -92,16 +120,20 @@ export default Controller.extend({
 
   // Private methods
 
+  _saveRandomPatient() {
+    return this.store.createRecord('patient').randomize().save();
+  },
+
+  _saveRandomEditor() {
+    return this.store.createRecord('editor').randomize().save();
+  },
+
   _saveRandomLibrary() {
     return this.store.createRecord('library').randomize().save();
   },
 
   _saveRandomAuthor() {
     return this.store.createRecord('author').randomize().save();
-  },
-
-  _saveRandomEditor() {
-    return this.store.createRecord('editor').randomize().save();
   },
 
   _generateSomeBooks(author) {

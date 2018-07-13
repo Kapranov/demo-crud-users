@@ -10,7 +10,8 @@ export default Route.extend({
       libraries: store.findAll('library'),
       books:     store.findAll('book'),
       authors:   store.findAll('author'),
-      editors:   store.findAll('editor')
+      editors:   store.findAll('editor'),
+      patients:  store.findAll('patient')
     })
   },
 
@@ -20,6 +21,7 @@ export default Route.extend({
     controller.set('books', model.books);
     controller.set('authors', model.authors);
     controller.set('editors', model.editors);
+    controller.set('patients', model.patients);
 
     this._super(controller, model);
   }

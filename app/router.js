@@ -33,6 +33,30 @@ Router.map(function() {
   this.route('user',    { path: '/user/:user_id' });
   this.route('post',    { path: '/post/:post_id' });
 
+  this.route('demo-tables', function() {
+    this.route('add-remove-column');
+    this.route('column-sets');
+    this.route('common-table');
+    this.route('custom-actions');
+    this.route('custom-column-classes');
+    this.route('custom-components-in-cell');
+    this.route('custom-messages');
+    this.route('display-data-changed-action');
+    this.route('demo-table');
+    this.route('expandable-rows');
+    this.route('filtering');
+    this.route('grouped-headers');
+    this.route('grouped-rows');
+    this.route('in-line-edit');
+    this.route('route-cells');
+    this.route('select-rows-with-checkboxes');
+    this.route('sort-by-filter-by');
+  });
+
+  this.route('patients', function() {
+    this.route('patient');
+  });
+
   this.route('posts', function() {
     this.route('new');
   });

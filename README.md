@@ -619,7 +619,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-### 11 July 2018 by Oleg G.Kapranov
+### 13 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
@@ -841,3 +841,4 @@ export default Ember.Controller.extend({
 [402]: https://github.com/firebase/emberfire/issues/424
 [404]: https://github.com/simplabs/ember-simple-auth/issues/928
 [405]: https://stackoverflow.com/questions/42101536/ember-firebase-authentication-session-doesnt-seem-inject
+[406]: https://stackoverflow.com/questions/38603307/ember-data-firebase-rules-confusion
