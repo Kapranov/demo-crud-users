@@ -1,9 +1,13 @@
 <h3>Demo tables a data examples</h3>
 
+<hr>
+
 <ul class="nav nav-pills">
   {{#each routes as |route|}}
     {{#link-to route.route tagName="li"}}{{#link-to route.route}}{{route.name}}{{/link-to}}{{/link-to}}
   {{/each}}
 </ul>
+
+<hr>
 
 {{outlet}}

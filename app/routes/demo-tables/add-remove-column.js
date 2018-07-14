@@ -1,4 +1,3 @@
-import Route from '@ember/routing/route';
+import DemoTablesRoute from './demo-tables';
 
-export default Route.extend({
-});
+export default DemoTablesRoute.extend({});

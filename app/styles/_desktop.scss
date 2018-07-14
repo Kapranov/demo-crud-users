@@ -31,11 +31,8 @@ html {
   padding: 20px;
   margin-top: 50px;
   color: darken($brand-primary, 50);
-  //color: red;
   background-color: lighten($brand-primary, 45);
-  //background-color: blue;
   border-top: 1px solid lighten($brand-primary, 30);
-  //border-top: 1px solid green;
 }
 
 .vtop {
@@ -107,11 +104,12 @@ th.wider {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #eee;
+  color: #aaa;
   &.active {
     background-color: #000;
   }
 }
+
 
 .create-btn {
   padding: 4px 5px;
@@ -390,9 +388,6 @@ th.wider {
   margin: 8px;
   padding: 4px;
 }
-
-//
-//
 
 a:hover {
   text-decoration: none;
