@@ -619,7 +619,25 @@ export default Ember.Controller.extend({
 });
 ```
 
-### 13 July 2018 by Oleg G.Kapranov
+* demo-table                  - hide
+* add-remove-column           - hide
+* common-table                - show
+* custom-actions              - show
+* custom-components-in-cell   - show
+* custom-messages             - show
+* custom-column-classes       - show
+* grouped-headers             - show
+* route-cells                 - show
+* expandable-rows             - show
+* display-data-changed-action - show
+* select-rows-with-checkboxes - show
+* column-sets                 - show
+* sort-by-filter-by           - show
+* filtering                   - show
+* grouped-rows                - show
+* in-line-edit                - show
+
+### 15 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations

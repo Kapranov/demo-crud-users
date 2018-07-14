@@ -1,3 +1,3 @@
-import DemoTablesRoute from './demo-tables';
+import DemoTableRoute from './demo-table';
 
-export default DemoTablesRoute.extend({});
+export default DemoTableRoute.extend({});
