@@ -31,7 +31,7 @@ export default Model.extend({
   },
 
   _patientIndex(i) {
-    return random.number(100);
+    return random.number(i - 100);
   },
 
   _patientCountry() {
