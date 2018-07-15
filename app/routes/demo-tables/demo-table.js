@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
-import {get} from '@ember/object';
-import {A} from '@ember/array';
-//import {next} from '@ember/runloop';
+import { get } from '@ember/object';
+import { A } from '@ember/array';
+//import { next } from '@ember/runloop';
 
 export default Route.extend({
   beforeModel() {
@@ -14,11 +14,11 @@ export default Route.extend({
 
   setupController(controller) {
     controller.set('columns', A([
-      {propertyName: 'index'},
-      {propertyName: 'firstName'},
-      {propertyName: 'lastName'},
-      {propertyName: 'age'},
-      {propertyName: 'city'}
+      { propertyName: 'index' },
+      { propertyName: 'firstName' },
+      { propertyName: 'lastName' },
+      { propertyName: 'age' },
+      { propertyName: 'city' }
     ]));
 
     controller.set('filterQueryParameters', {

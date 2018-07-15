@@ -22,7 +22,7 @@ export default Route.extend({
         k.indexOf('loading') === -1 &&
         k.indexOf('error') === -1 &&
         k.indexOf('index') === -1 &&
-        k !== 'examples.example';
+        k !== 'demo-tables.demo-table';
     });
 
     routes = routes.map(r => {

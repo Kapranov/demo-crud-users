@@ -1,4 +1,3 @@
 import DemoTableRoute from './demo-table';
 
-export default DemoTableRoute.extend({
-});
+export default DemoTableRoute.extend({});
