@@ -1,7 +1,8 @@
+/* global Prism */
 import Route from '@ember/routing/route';
 import { get } from '@ember/object';
 import { A } from '@ember/array';
-//import { next } from '@ember/runloop';
+import { next } from '@ember/runloop';
 
 export default Route.extend({
   beforeModel() {
@@ -34,13 +35,13 @@ export default Route.extend({
   },
 
   actions: {
-    //didTransition() {
-    //  next(() => {
-    //    if (window && window['Prism']) {
-    //      Prism.highlightAll();
-    //    }
-    //  });
-    //  return true;
-    //}
+    didTransition() {
+      next(() => {
+        if (window && window['Prism']) {
+          Prism.highlightAll();
+        }
+      });
+      return true;
+    }
   }
 });
