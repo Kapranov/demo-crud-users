@@ -17,9 +17,9 @@ module.exports = function(defaults) {
     },
 
     'ember-prism': {
-      'theme': 'twilight',
+      'theme': 'coy',
       'components': ['scss', 'markup'],
-      'plugins': ['line-highlight']
+      'plugins': ['line-numbers', 'normalize-whitespace']
     },
 
     'ember-bootstrap': {
