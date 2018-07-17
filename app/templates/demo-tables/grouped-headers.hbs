@@ -1,4 +1,24 @@
-<h4>
+<h3>
   Grouped headers
   <small>simple table</small>
-</h4>
+</h3>
+
+{{models-table
+  data=data
+  columns=columns
+  groupedHeaders=groupedHeaders
+  showColumnsDropdown=false
+  showGlobalFilter=false
+  useFilteringByColumns=false
+}}
+
+<h3>Grouped headers <small>server paginated table</small></h3>
+
+{{models-table-server-paginated
+  data=model
+  columns=columns
+  groupedHeaders=groupedHeaders
+  showColumnsDropdown=false
+  showGlobalFilter=false
+  useFilteringByColumns=false
+}}
