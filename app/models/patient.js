@@ -1,9 +1,9 @@
 import DS from 'ember-data';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 import Faker from 'faker';
 
 const { Model, attr } = DS;
-const {name, random, address} = Faker;
+const { name, random, address } = Faker;
 
 export default Model.extend({
   index:     attr('number'),
@@ -30,8 +30,8 @@ export default Model.extend({
     return this;
   },
 
-  _patientIndex(i) {
-    return random.number(i - 100);
+  _patientIndex() {
+    return random.number(100);
   },
 
   _patientCountry() {
