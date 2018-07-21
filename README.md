@@ -619,25 +619,49 @@ export default Ember.Controller.extend({
 });
 ```
 
-* demo-table                  - hide
-* add-remove-column           - hide
-* common-table                - show
-* custom-actions              - show
-* custom-components-in-cell   - show
-* custom-messages             - show
-* custom-column-classes       - show
-* grouped-headers             - show
-* route-cells                 - show
-* expandable-rows             - show
-* display-data-changed-action - show
-* select-rows-with-checkboxes - show
-* column-sets                 - show
-* sort-by-filter-by           - show
-* filtering                   - show
-* grouped-rows                - show
-* in-line-edit                - show
+##
 
-### 15 July 2018 by Oleg G.Kapranov
+```js
+// visible-index.js
+import Ember from 'ember';
+
+export function visibleIndex(index) {
+  let idx = Number(index);
+  return idx + 1;
+}
+
+export default Ember.Helper.helper(visibleIndex);
+
+model: ['Foo', 'Man', 'Chu']
+foosWithCount: Ember.computed.map('model', function(foo, index) {
+  return Ember.Object.create({
+    name: foo,
+    count: index + 1
+  });
+});
+
+import Ember from 'ember';
+
+export function plusOne(params) {
+  return parseInt(params) + 1;
+}
+
+export default Ember.HTMLBars.makeBoundHelper(plusOne);
+
+{{plus-one index}}
+
+patientIndex() {
+  var items = [];
+  for (let i = 0; i < items; i++) {
+    return items.objectAt(i) + 1;
+  }
+  return items;
+},
+
+// http://2ality.com/2011/04/iterating-over-arrays-and-objects-in.html
+// https://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html
+```
+### 20 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations

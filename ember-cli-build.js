@@ -26,6 +26,20 @@ module.exports = function(defaults) {
       'bootstrapVersion': 3,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
+    },
+    SemanticUI: {
+      import: {
+        css: true,
+        javascript: true,
+        images: true,
+        fonts: true
+      },
+      source: {
+        css: 'node_modules/semantic-ui-css',
+        javascript: 'node_modules/semantic-ui-css',
+        images: 'node_modules/semantic-ui-css/themes/default/assets/images',
+        fonts: 'node_modules/semantic-ui-css/themes/default/assets/fonts'
+      }
     }
   });
 

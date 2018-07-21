@@ -1,0 +1,17 @@
+<div class="full height">
+  <div class="toc">
+    <div class="ui vertical inverted menu left overlay visible">
+      <div class="item">
+        {{#link-to 'demo-semantic.index' class='ui logo icon image'}}
+          <img src="http://semantic-ui.com/images/logo.png">
+        {{/link-to}}
+        <a href="/"><b>UI Ember Docs</b></a>
+      </div>
+      {{partial "demo-semantic/menu"}}
+    </div>
+  </div>
+
+  <div class="article">
+    {{outlet}}
+  </div>
+</div>

@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('panels');
   this.route('markdowns');
   this.route('demo-modals');
+  this.route('semantic');
   this.route('signatures');
   this.route('shepherds');
   this.route('render_nested');
@@ -50,6 +51,30 @@ Router.map(function() {
     this.route('filtering');
     this.route('grouped-rows');
     this.route('in-line-edit');
+  });
+
+  this.route('demo-semantic', function() {
+    this.route('accordion');
+    this.route('base-mixin');
+    this.route('checkbox');
+    this.route('dimmer');
+    this.route('dropdown');
+    this.route('embed');
+    this.route('introduction');
+    this.route('modal');
+    this.route('nag');
+    this.route('popup');
+    this.route('progress');
+    this.route('radio');
+    this.route('rating');
+    this.route('search');
+    this.route('shape');
+    this.route('sidebar');
+    this.route('sticky');
+    this.route('tab');
+    this.route('transition');
+    this.route('upgrading');
+    this.route('usage');
   });
 
   this.route('patients', function() {
