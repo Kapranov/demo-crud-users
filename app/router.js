@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('shepherds');
   this.route('render_nested');
   this.route('uploads');
+  this.route('freestyle');
 
   this.route('index',   { path: '/' });
   this.route('missing', { path: '/*path' });
