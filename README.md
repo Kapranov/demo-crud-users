@@ -661,7 +661,7 @@ patientIndex() {
 // http://2ality.com/2011/04/iterating-over-arrays-and-objects-in.html
 // https://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html
 ```
-### 20 July 2018 by Oleg G.Kapranov
+### 23 July 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations

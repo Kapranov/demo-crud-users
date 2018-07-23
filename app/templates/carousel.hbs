@@ -1,0 +1,31 @@
+<section class="container">
+  <h1>Basic Carousel With Lazy Loaded Images</h1>
+</section>
+
+<hr>
+
+<section class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      {{#twbs-carousel classNames="slide" as |carousel|}}
+        {{#carousel.slide classNames="active" as |slide|}}
+          {{slide.img src="https://dummyimage.com/1600x900/f7d3a0/333.jpg&text=Slide+Animation+1" alt="A slide image."}}
+        {{/carousel.slide}}
+        {{#carousel.slide as |slide|}}
+          {{slide.img lazy="https://dummyimage.com/1600x900/f7d3a0/333.jpg&text=Slide+Animation+2" alt="A slide image."}}
+        {{/carousel.slide}}
+        {{#carousel.slide as |slide|}}
+          {{slide.img lazy="https://dummyimage.com/1600x900/f7d3a0/333.jpg&text=Slide+Animation+3" alt="A slide image."}}
+        {{/carousel.slide}}
+        {{#carousel.slide as |slide|}}
+          {{slide.img lazy="https://dummyimage.com/1600x900/f7d3a0/333.jpg&text=Slide+Animation+4" alt="A slide image."}}
+        {{/carousel.slide}}
+        {{#carousel.slide as |slide|}}
+          {{slide.img lazy="https://dummyimage.com/1600x900/f7d3a0/333.jpg&text=Slide+Animation+5" alt="A slide image."}}
+        {{/carousel.slide}}
+      {{/twbs-carousel}}
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</section>

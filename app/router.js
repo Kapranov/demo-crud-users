@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('avatar');
   this.route('auth');
   this.route('authors');
+  this.route('carousel');
   this.route('editors');
   this.route('books');
   this.route('contact');
