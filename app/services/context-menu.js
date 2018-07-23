@@ -4,6 +4,7 @@ import Evented from '@ember/object/evented';
 export default Service.extend(Evented, {
   menuActions: null,
   model: null,
+  escapeCSS: null,
 
   show(event, menuActions, model) {
     this.setProperties({

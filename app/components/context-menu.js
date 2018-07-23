@@ -3,15 +3,16 @@ import { getOwner } from '@ember/application';
 import { computed } from '@ember/object';
 import { oneWay } from '@ember/object/computed';
 import { next } from '@ember/runloop';
+import { htmlSafe } from '@ember/template';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
   classNames: ['__ember__context__menu'],
   attributeBindings: ['tabindex', 'style'],
-
   tabindex: '-1',
+
   style: computed('left', 'top', function() {
-    return `left: ${this.get('left')};top:${this.get('top')};`;
+    return htmlSafe(`left: ${this.get('left')}; top:${this.get('top')};`);
   }),
 
   contextMenuService: service('context-menu'),
