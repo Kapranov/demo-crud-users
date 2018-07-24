@@ -65,8 +65,10 @@ export default Component.extend({
     }
 
     this.setProperties({
-      left: `${left}px`,
-      top: `${top}px`
+      //left: `${left}px`,
+      //top: `${top}px`
+      left: `565px`,
+      top: `104px`
     });
   },
 

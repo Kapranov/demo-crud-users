@@ -1,37 +1,38 @@
 import Route from '@ember/routing/route';
+import Faker from 'faker';
 
 export default Route.extend({
   model() {
     return [
       {
-        name: 'VEL S',
-        city: 'Madurai',
+        name: Faker.name.findName(),
+        city: Faker.address.city(),
         education: 'B.E',
-        work: 'Chennai'
+        work: Faker.address.city()
       },
       {
-        name: 'Bala',
-        city: 'Madurai',
+        name: Faker.name.findName(),
+        city: Faker.address.city(),
         education: 'B.E',
-        work: 'Chennai'
+        work: Faker.address.city()
       },
       {
-        name: 'BalaChandar',
-        city: 'Madurai',
+        name: Faker.name.findName(),
+        city: Faker.address.city(),
         education: 'B.E',
-        work: 'Chennai'
+        work: Faker.address.city()
       },
       {
-        name: 'Pradeep Chandar',
-        city: 'Madurai',
+        name: Faker.name.findName(),
+        city: Faker.address.city(),
         education: 'B.E',
-        work: 'Chennai'
+        work: Faker.address.city()
       },
       {
-        name: 'Raj Michaels',
-        city: 'Madurai',
+        name: Faker.name.findName(),
+        city: Faker.address.city(),
         education: 'B.E',
-        work: 'Chennai'
+        work: Faker.address.city()
       }
     ];
   },
