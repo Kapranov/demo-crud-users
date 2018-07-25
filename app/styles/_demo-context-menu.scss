@@ -5,11 +5,11 @@
   z-index:  100;
 }
 
-.context-menu-container {
+.demo-context-menu-container {
   position: fixed;
 }
 
-.context-menu {
+.demo-context-menu {
   position: absolute;
   box-sizing: border-box;
   top:      0;
@@ -21,7 +21,7 @@
   background-color: white;
 
   &--sub {
-    @extend .context-menu;
+    @extend .demo-context-menu;
     display:  none;
     left:     calc(100%);
     top:      -1px;
@@ -30,12 +30,12 @@
   &--left {
     right: 0;
 
-    .context-menu--sub {
+    .demo-context-menu--sub {
       left:  initial;
       right: calc(100%);
     }
 
-    .context-menu__item {
+    .demo-context-menu__item {
       padding-right: 5px;
       padding-left:  1em;
 
@@ -86,7 +86,7 @@
       }
 
       &:hover {
-        &>.context-menu--sub {
+        &>.demo-context-menu--sub {
           display: block;
         }
       }
