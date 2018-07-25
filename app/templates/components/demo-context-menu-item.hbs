@@ -1,1 +1,19 @@
-{{yield}}
+<span class="demo-context-menu__item__label">
+  {{#if item.icon}}
+    {{fa-icon item.icon class="demo-context-menu__item__icon"}}
+  {{/if}}
+  {{item.label}} {{#if _amount}}({{_amount}}){{/if}}
+</span>
+
+{{#if item.subActions}}
+  {{#unless isDisabled}}
+    <ul class="demo-context-menu--sub">
+      {{#each item.subActions as |subItem|}}
+        {{demo-context-menu-item item=subItem
+                                 amount=amount
+                                 itemIsDisabled=itemIsDisabled
+                                 clickAction=clickAction}}
+      {{/each}}
+    </ul>
+  {{/unless}}
+{{/if}}
