@@ -1,9 +1,10 @@
 import Component from '@ember/component';
-import invokeAction from 'ember-invoke-action';
-import service from '@ember/service/inject';
-import { htmlSafe } from '@ember/string';
-import computed, { reads } from '@ember/object/computed';
-import get from '@ember/object/get';
+import { invokeAction } from 'ember-invoke-action';
+import { inject as service } from '@ember/service';
+import { htmlSafe } from '@ember/template';
+import { computed } from '@ember/object';
+import { reads } from '@ember/object/computed';
+import { get } from '@ember/object';
 import $ from 'jquery';
 
 export default Component.extend({

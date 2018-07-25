@@ -1,7 +1,8 @@
 import Component from '@ember/component';
-import invokeAction from 'ember-invoke-action';
-import computed, { bool } from '@ember/object/computed';
-import get from '@ember/object/get';
+import { invokeAction } from 'ember-invoke-action';
+import { computed } from '@ember/object';
+import { bool } from '@ember/object/computed';
+import { get } from '@ember/object';
 
 export default Component.extend({
   tagName: 'li',

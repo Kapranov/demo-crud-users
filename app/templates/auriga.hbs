@@ -1,0 +1,15 @@
+<h1>Ember-context-menu</h1>
+
+<p>
+  Click to select a block, right-click *on selected blocks* for the context-menu.
+</p>
+
+{{#each model as |object|}}
+  {{test-demo-context-menu click=(action "toggleSelectObject" object)
+                   object=object
+                   contextSelection=selection}}
+{{/each}}
+
+<p>See README for detailed HOW TO</p>
+
+{{demo-context-menu}}

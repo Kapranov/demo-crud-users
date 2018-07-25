@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about');
+  this.route('auriga');
   this.route('attachments');
   this.route('avatar');
   this.route('auth');
@@ -122,7 +123,6 @@ Router.map(function() {
       this.route('new');
     });
   });
-  this.route('demo-context');
 });
 
 Router.extend({

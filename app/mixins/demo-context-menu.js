@@ -1,7 +1,7 @@
 import Mixin from '@ember/object/mixin';
-import invokeAction from 'ember-invoke-action';
-import service from '@ember/service/inject';
-import get from '@ember/object/get';
+import { invokeAction } from 'ember-invoke-action';
+import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Mixin.create({
   demoContextMenuService: service('demo-context-menu'),
