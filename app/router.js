@@ -122,6 +122,7 @@ Router.map(function() {
       this.route('new');
     });
   });
+  this.route('demo-context');
 });
 
 Router.extend({
