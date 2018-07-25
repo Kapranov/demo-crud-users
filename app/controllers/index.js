@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import { match, not } from '@ember/object/computed';
 import { get, set } from '@ember/object';
-import {getOwner} from '@ember/application';
+import { getOwner } from '@ember/application';
 import firebase from 'firebase';
 
 export default Controller.extend({

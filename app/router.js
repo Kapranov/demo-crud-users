@@ -19,13 +19,13 @@ Router.map(function() {
   this.route('invitations');
   this.route('panels');
   this.route('markdowns');
+  this.route('menu-context');
   this.route('demo-modals');
   this.route('semantic');
   this.route('signatures');
   this.route('shepherds');
   this.route('render_nested');
   this.route('uploads');
-  this.route('freestyle');
 
   this.route('index',   { path: '/' });
   this.route('missing', { path: '/*path' });
@@ -122,7 +122,6 @@ Router.map(function() {
       this.route('new');
     });
   });
-  this.route('menu-context');
 });
 
 Router.extend({

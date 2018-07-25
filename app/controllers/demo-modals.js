@@ -1,8 +1,8 @@
 import Controller from '@ember/controller';
-import {inject as service} from '@ember/service';
-import {computed, get, set} from '@ember/object';
-import {not} from '@ember/object/computed';
-import {A} from '@ember/array';
+import { inject as service } from '@ember/service';
+import { computed, get, set } from '@ember/object';
+import { not } from '@ember/object/computed';
+import { A } from '@ember/array';
 
 export default Controller.extend({
   modalsManager: service(),
