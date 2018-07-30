@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import computed from '@ember/object/computed';
-import demoContextMenu from './demo-context-menu';
+import contextMenuMixin from '../services/demo-context-menu';
 
 function increment(objects, amount = 1) {
   objects.forEach((object) => {
@@ -14,7 +14,7 @@ function setTo(objects, value = 0) {
   });
 }
 
-export default Component.extend(demoContextMenu, {
+export default Component.extend(contextMenuMixin, {
   classNames: ['test-demo-context-menu'],
   classNameBindings: ['object.selected:test-demo-context-menu--selected'],
   contextSelection: [],

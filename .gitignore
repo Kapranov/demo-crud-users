@@ -23,5 +23,3 @@ package.json.ember-try
 /public/package-lock.json
 
 electron-out/
-
-public/new.js.save
