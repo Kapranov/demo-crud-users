@@ -675,7 +675,7 @@ patientIndex() {
 [10]: https://github.com/piceaTech/ember-rapid-forms
 [11]: http://piceatech.github.io/ember-rapid-forms
 [12]: https://github.com/yapplabs/ember-radio-button
-[13]: https://github.com/yapplabs/ember-radio-button/tree/master/tests/dummy/app/components
+[13]: https://github.com/TryGhost/Ghost-Admin
 [14]: https://github.com/patience-tema-baron/ember-keyboard
 [15]: https://github.com/jamesarosen/ember-i18n
 [16]: https://github.com/scoutforpets/ember-fullcalendar
