@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('carousel');
   this.route('cancelable');
   this.route('editors');
+  this.route('example-validated');
   this.route('books');
   this.route('contact');
   this.route('invitations');

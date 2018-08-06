@@ -17,9 +17,11 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "@ember-decorators/babel-transforms": "^2.0.2",
     "@html-next/flexi-config": "^2.1.1",
     "@html-next/flexi-dsl": "^2.1.0",
     "@html-next/flexi-layouts": "^2.2.1",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -54,7 +56,9 @@
     "ember-cli-uglify": "^2.1.0",
     "ember-collapsible-panel": "^3.1.1",
     "ember-composable-helpers": "^2.1.0",
+    "ember-cp-validations": "^4.0.0-beta.2",
     "ember-data": "~3.3.1",
+    "ember-decorators": "^2.3.1",
     "ember-droplet": "^3.2.0",
     "ember-electron": "^2.9.0",
     "ember-export-application-global": "^2.0.0",
