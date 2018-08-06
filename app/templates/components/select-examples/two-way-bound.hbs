@@ -1,0 +1,14 @@
+<h3>Two-way bound</h3>
+<p>Although data-down, actions-up is the recommended usage, you can force a two-way binding with [Ember's `mut` helper](http://emberjs.com/blog/2015/05/10/run-up-to-two-oh.html#toc_the-code-mut-code-helper). Instead of passing in an action name to `on-change`, pass in something like `(mut boundValue)`.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    {{searchable-select
+      content=TEDevents
+      sortBy="title"
+      selected=selectedOption
+      on-change=(action (mut selectedOption))}}
+
+    <p>Selected option (bound): {{selectedOption.title}}</p>
+  </div>
+</div>

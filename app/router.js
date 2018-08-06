@@ -26,7 +26,7 @@ Router.map(function() {
   this.route('semantic');
   this.route('signatures');
   this.route('shepherds');
-  this.route('searchable-select-selects');
+  this.route('searchable-selects');
   this.route('render_nested');
   this.route('uploads');
 

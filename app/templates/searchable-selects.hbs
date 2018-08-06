@@ -1,0 +1,24 @@
+{{ted-page-header
+  subheading='Ember'
+  slim-heading='Searchable '
+  strong-heading='Select'
+  byline='A select-like menu with searching and filtering capabilities'
+  github='http://github.com/tedconf/ember-searchable-select'}}
+
+<div class="container">
+  <h1> Ember Searchable Select </h1>
+  <h2>A select-like menu with searching and filtering capabilities</h2>
+
+  {{select-examples/example-default TEDevents=TEDevents}}
+  {{select-examples/initial-selection TEDevents=TEDevents}}
+  {{select-examples/example-sort TEDspeakers=TEDspeakers}}
+  {{select-examples/example-disable TEDevents=TEDevents}}
+  {{select-examples/word-boundary TEDevents=TEDevents}}
+  {{select-examples/multi-select TEDevents=TEDevents}}
+  {{select-examples/add-new talkTags=talkTags}}
+  {{select-examples/ajax-search TEDevents=TEDevents}}
+  {{select-examples/ajax-loader TEDevents=TEDevents}}
+  {{select-examples/two-way-bound TEDevents=TEDevents}}
+
+  {{options-table}}
+</div>
