@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('auth');
   this.route('authors');
   this.route('carousel');
+  this.route('cancelable');
   this.route('editors');
   this.route('books');
   this.route('contact');
