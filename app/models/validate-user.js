@@ -1,3 +1,4 @@
+// BEGIN-SNIPPET validate-user-model
 import DS from 'ember-data';
 import { validator, buildValidations } from 'ember-cp-validations';
 
@@ -61,3 +62,4 @@ export default Model.extend(Validations, {
   email: attr('string'),
   details: belongsTo('validate-user-detail')
 });
+// END-SNIPPET
