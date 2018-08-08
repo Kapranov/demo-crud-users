@@ -40,7 +40,9 @@ module.exports = function(defaults) {
         images: 'node_modules/semantic-ui-css/themes/default/assets/images',
         fonts: 'node_modules/semantic-ui-css/themes/default/assets/fonts'
       }
-    }
+    },
+    snippetSearchPaths: ['app'],
+    snippetPaths: ['snippets', 'app']
   });
 
   app.import('node_modules/ember-droplet/dist/ember-droplet.js');

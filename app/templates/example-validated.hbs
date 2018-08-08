@@ -65,11 +65,11 @@
   {{#unless isRegistered}}
     <div class='snippet-container {{if showCode 'show'}}'>
       {{#bs-tab as |tab|}}
-        {{#tab.pane title="models/validate-user.js"}}
-          {{code-snippet name='validate-user-model.js'}}
+        {{#tab.pane title="validate-user.js"}}
+          {{code-snippet name="validate-user-model.js" unindent=false}}
         {{/tab.pane}}
 
-        {{#tab.pane title="models/validate-user-detail.js"}}
+        {{#tab.pane title="validate-user-detail.js"}}
           {{code-snippet name='validate-user-detail-model.js'}}
         {{/tab.pane}}
 

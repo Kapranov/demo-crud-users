@@ -1,4 +1,6 @@
 // BEGIN-SNIPPET validated-input
+import Component from '@ember/component';
+import { defineProperty } from '@ember/object';
 import {
   not,
   notEmpty,
@@ -7,9 +9,6 @@ import {
   readOnly,
   alias
 } from '@ember/object/computed';
-
-import Component from '@ember/component';
-import { defineProperty } from '@ember/object';
 
 export default Component.extend({
   classNames: ['validated-input'],
@@ -22,7 +21,6 @@ export default Component.extend({
   validation: null,
   showValidations: false,
   didValidate: false,
-
   notValidating: not('validation.isValidating').readOnly(),
   hasContent: notEmpty('value').readOnly(),
   hasWarnings: notEmpty('validation.warnings').readOnly(),

@@ -1,7 +1,8 @@
+// BEGIN-SNIPPET validate-user-detail-model
 import DS from 'ember-data';
+import { validator, buildValidations } from 'ember-cp-validations';
 import { computed } from '@ember/object';
 import moment from 'moment';
-import { validator, buildValidations } from 'ember-cp-validations';
 
 const { Model, attr } = DS;
 
@@ -57,3 +58,4 @@ export default Model.extend(Validations, {
   phone: attr('string'),
   url: attr('string')
 });
+// END-SNIPPET
