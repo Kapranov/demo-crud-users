@@ -1,0 +1,12 @@
+<p>
+  {{#if backgroundTask.isRunning}}
+    Running background task...
+  {{else}}
+    {{#if backgroundTask.last.isSuccessful}}
+      Task successful!
+    {{else}}
+      Task failed!
+    {{/if}}
+  {{/if}}
+</p>
+
