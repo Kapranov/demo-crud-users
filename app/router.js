@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('contact');
   this.route('invitations');
   this.route('panels');
+  this.route('plannings');
   this.route('markdowns');
   this.route('menu-context');
   this.route('demo-modals');

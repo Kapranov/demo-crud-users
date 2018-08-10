@@ -1,0 +1,52 @@
+<p>Choose the dates you prefer in the order you prefer them: {{moment-format currentDate "MMMM YYYY"}}</p>
+
+<hr>
+
+{{#power-calendar
+  center=center
+  onCenterChange=(action (mut center) value="date") as |calendar|}}
+
+  {{#calendar.nav}}
+    <span class="with-invisible-select">
+      {{#with (format-date calendar.center 'MMMM') as |currentMonth|}}
+        {{currentMonth}}
+        <select onchange={{action "changeCenter" "month" calendar}}>
+          {{#each months as |month|}}
+            <option value="{{month}}" selected={{eq month currentMonth}}>{{month}}</option>
+          {{/each}}
+        </select>
+      {{/with}}
+    </span>
+    <span class="with-invisible-select">
+      {{#with (format-date calendar.center 'YYYY') as |currentYear|}}
+        {{currentYear}}
+        <select onchange={{action "changeCenter" "year" calendar}}>
+          {{#each years as |year|}}
+            <option value="{{year}}" selected={{eq year currentYear}}>{{year}}</option>
+          {{/each}}
+        </select>
+      {{/with}}
+    </span>
+  {{/calendar.nav}}
+
+  {{calendar.days}}
+{{/power-calendar}}
+
+<hr>
+
+{{#power-calendar-multiple
+  center=center
+  selected=preferredDates
+  onSelect=(action (mut preferredDates) value="date") as |calendar|}}
+  {{calendar.nav}}
+  {{calendar.days}}
+{{/power-calendar-multiple}}
+
+Preferred dates:
+
+<ol>
+  {{#each preferredDates as |d|}}
+    <li>{{format-date d 'LLL'}}</li>
+  {{/each}}
+</ol>
+          
