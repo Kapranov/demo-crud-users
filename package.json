@@ -85,6 +85,7 @@
     "ember-ted-docs": "^1.2.1",
     "ember-tether": "^1.0.0",
     "ember-to-string": "^1.0.5",
+    "ember-toggle": "^5.3.0",
     "ember-truth-helpers": "^2.0.0",
     "ember-wormhole": "^0.5.4",
     "emberfire": "^2.0.10",
