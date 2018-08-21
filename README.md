@@ -45,6 +45,24 @@ https://*.googleapis.com"
   },
 ```
 
+## Existing Data vs. New Data
+
+[https://firebase.google.com/docs/database/security/securing-data](Secure Your Data)
+
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": "!data.exists() || !newData.exists()",
+    "users": {
+      "$user_id": {
+        ".write": "$user_id === auth.uid"
+      }
+    }
+  }
+}
+```
+
 ## Create a simple modal component
 
 ```js
