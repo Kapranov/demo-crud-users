@@ -679,7 +679,44 @@ patientIndex() {
 // http://2ality.com/2011/04/iterating-over-arrays-and-objects-in.html
 // https://thejsguy.com/2016/07/30/javascript-for-loop-vs-array-foreach.html
 ```
-### 23 July 2018 by Oleg G.Kapranov
+
+## NPM script to publish Ember addon dummy app as demo in github pages
+
+```bash
+#!/bin/sh
+
+rm -Rf dist/*
+ember build --env=production
+mkdir /tmp/example-app
+cp -R dist/* /tmp/example-app
+git checkout gh-pages
+rm -Rf ./*
+cp -R /tmp/example-app/* ./
+git add .
+git commit -m "Publishing docs for $(git describe --tags)"
+git push origin gh-pages
+git checkout master
+```
+
+## And `ember-auto-import` will allow us to import NPM packages that aren’t Ember addons:
+
+```bash
+$ ember install ember-auto-import
+```
+
+## Do you have a UI to that you'll show if the upload is successful? If so, you can use the `waitFor` test helper.
+
+```js
+import { waitFor } from '@ember/test-helpers';
+
+test('foobar', async function (assert) {
+  await waitFor('.class-to-wait');
+  assert.ok(true);
+});
+```
+
+
+### 28 August 2018 by Oleg G.Kapranov
 
 [1]:  http://voidcanvas.com/ember-testing/
 [2]:  https://github.com/poteto/ember-changeset-validations
